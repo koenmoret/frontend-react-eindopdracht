@@ -1,3 +1,7 @@
 # dependencies
 
-# react-router-dom
+react-router-dom
+
+# Iconen
+react-icons/fa
+react-icons/tb

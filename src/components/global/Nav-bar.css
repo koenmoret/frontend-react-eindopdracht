@@ -1,0 +1,30 @@
+:root {
+    --color-black: #0C0C0C;
+    --color-white: #FFF;
+}
+.default-link {
+    border-bottom: 1px solid transparent;
+}
+.active-link {
+    border-bottom: 1px solid var(--color-white);
+}
+.fa-shopping-cart svg {
+    font-size: 24px;
+    cursor: pointer;
+    fill: var(--color-white);
+}
+.fa-logout svg {
+    font-size: 24px;
+    cursor: pointer;
+    stroke: var(--color-white);
+}
+.cart-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -40px 0 0 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+}
