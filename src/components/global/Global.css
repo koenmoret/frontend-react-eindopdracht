@@ -1,0 +1,331 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Areas
+        3.1 Navigation
+        3.2 Header
+        3.3 Products
+    4. Media Queries
+////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/*////////////////////////
+    1. Global
+////////////////////////*/
+:root {
+    --color-blue: #4845E4;
+    --color-white: #FFF;
+    --color-pink: #ED4385;
+    --color-purple: #5B25CE;
+    --color-red: #ad2121;
+    --color-black: #0C0C0C;
+    --color-light-purple: #F2F0FF;
+    --color-light-gray: #F3F6F9;
+    --color-gray: #7A7A7A;
+    --menu-bar-width: 50px;
+    --menu-bar-height: 4px;
+    --gp-s: 20px;
+    --gp-m: 40px;
+    --gp-l: 60px;
+    --mb-4: 1.5rem;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vH;
+}
+.outer-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 100vW;
+}
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 0 20px;
+    position: relative;
+}
+.mb-4{
+    margin-bottom: var(--mb-4);
+}
+a:hover {
+    cursor: pointer;
+}
+#hamburger--btn {
+    display: none;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn-primary {
+    padding: 0 15px;
+    border-radius: 0.25rem;
+}
+
+/*////////////////////////
+    2. Typography
+////////////////////////*/
+* {
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+a,
+a:link,
+a:visited {
+    color: var(--color-purple);
+    text-decoration: none;
+}
+.text-danger {
+    color: var(--color-red);
+    font-weight: 300;
+}
+
+/*////////////////////////
+    3. Areas
+////////////////////////*/
+
+/*/////////
+3.1 Header
+/////////*/
+.loggedIn .forms {
+    display: none;
+}
+.forms {
+    visibility: hidden;
+    width:300px;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+.forms.form_open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 3;
+    background-color: #afc1ba;
+    border-radius: 5px;
+}
+.loginForm, .registerForm {
+    display: none;
+    padding: 15px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+.loginForm.login_open, .registerForm.register_open{
+    display: initial;
+    opacity: 1;
+    z-index: 3;
+}
+form {
+    display: block;
+    margin-top: 0;
+}
+.form-outline {
+    position: relative;
+    width: 100%;
+}
+.form-outline .form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #4f4f4f;
+    border-radius: 0.25rem;;
+    appearance: none;
+    min-height: auto;
+    padding: 0.32rem 0.75rem;
+    border: 0;
+}
+.form-outline .form-control~.form-label {
+    position: absolute;
+    top: 0;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: 0.75rem;
+    padding-top: 0.37rem;
+    pointer-events: none;
+    color: #757575;
+    margin-bottom: 0;
+}
+label {
+    display: inline-block;
+    margin: 0 5px;
+    /*transition: opacity 0.3s;*/
+}
+/* Hide label on focus */
+.form-outline input:focus + label,
+.form-outline input:valid + label {
+    /*opacity: 0;*/
+}
+
+
+    /*/////////
+    3.2 Navigation
+    /////////*/
+.header--nav nav {
+    position: relative;
+    z-index: 1;
+}
+.header--nav nav ul {
+    display: flex;
+    column-gap: var(--gp-m);
+}
+.header--nav nav li {
+    list-style: none;
+}
+.header--nav .nav-item {
+    font-size: 20px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+
+/*////////////////////////
+    4. Media
+////////////////////////*/
+@media screen and (max-width: 1200px) {
+    /* voor desktops en groter */
+
+}
+
+@media screen and (max-width: 900px) {
+    /* voor tablets */
+
+}
+
+@media screen and (max-width: 578px) {
+    /* voor phones */
+    .pc {
+        /*display: none;*/
+    }
+    .gsm {
+        /*display: initial;*/
+    }
+    .header--background_overlay.nav_open{
+        background-image: linear-gradient(180deg,rgb(0 0 0 / 95%),#02020233);
+        transition: background 1s ease;
+    }
+    #menuToggler {
+        display: flex;
+        align-items: center;
+        width: var(--menu-bar-width);
+        height: var(--menu-bar-width);
+        position: absolute;
+        z-index: 3;
+    }
+    #menuToggler:hover {
+        cursor: pointer;
+    }
+    #hamburger {
+        background-color: var(--color-white);
+        width: var(--menu-bar-width);
+        height: var(--menu-bar-height);
+        transition: all 0.15s ease-in-out;
+        position: absolute;
+        z-index: 2;
+    }
+    #hamburger::before,
+    #hamburger::after {
+        background-color: var(--color-white);
+        display: block;
+        content: "";
+        width: var(--menu-bar-width);
+        height: var(--menu-bar-height);
+        position: absolute;
+        transition: all 0.35s ease-in-out;
+    }
+    #hamburger::before {
+        left: 0;
+        top: -15px;
+    }
+    #hamburger::after {
+        left: 0;
+        bottom: -15px;
+    }
+    .header--nav #hamburger.nav_open {
+        background-color: transparent;
+    }
+    .header--nav #hamburger.nav_open::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .header--nav #hamburger.nav_open::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .header--nav .menu--list {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    .header--nav .menu--list.nav_open {
+        visibility: visible;
+        opacity: 1;
+    }
+    .header--nav .menu--list ul {
+        position: absolute;
+        top: 12px;
+        left: 50px;
+        padding: 20px;
+        flex-direction: column;
+        row-gap: 18px;
+        z-index: 3;
+    }
+    .header--title h1 {
+        font-size: 3em;
+        color: var(--color-white);
+        text-align: center;
+        z-index: 1;
+    }
+    .header--title h2 {
+        font-size: 1em;
+        color: var(--color-white);
+        text-align: center;
+        z-index: 1;
+    }
+}
+
