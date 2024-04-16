@@ -28,7 +28,7 @@ header.home {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.header--background_overlay {
+.header--background__overlay {
     position: absolute;
     top: 0;
     left:0;
@@ -121,7 +121,7 @@ header.home {
     .gsm {
         /*display: initial;*/
     }
-    .header--background_overlay.nav_open{
+    .header--background__overlay.nav_open{
         background-image: linear-gradient(180deg,rgb(0 0 0 / 95%),#02020233);
         transition: background 1s ease;
     }

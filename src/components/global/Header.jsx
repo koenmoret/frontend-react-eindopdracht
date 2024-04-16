@@ -9,6 +9,7 @@ const Header = ({setClass}) => {
 
     return (
         <header className={`${setClass} outer-container header--background`}>
+            <div className={`header--background__overlay`}></div>
             <section className="inner-container">
                 <NavBar setClass={setClass} />
             </section>
