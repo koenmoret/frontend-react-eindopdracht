@@ -1,4 +1,5 @@
 import './Nav-bar.css';
+import {FaShoppingCart} from "react-icons/fa";
 
 
 // eslint-disable-next-line react/prop-types
@@ -9,9 +10,15 @@ function NavBar({setClass}) {
             <div className="header--nav">
                 <nav className={`${setClass}`}>
                     <ul>
-                        <li>test 1</li>
-                        <li>test 2</li>
-                        <li>test 3</li>
+                        <li>Home</li>
+                        <li>Producten</li>
+                        <li>Nieuws</li>
+                        <li>Login</li>
+                        <li>
+                            <span className="fa-shopping-cart">
+                               <FaShoppingCart/>
+                            </span>
+                        </li>
                     </ul>
                 </nav>
             </div>
