@@ -12,6 +12,7 @@ const Header = ({setClass}) => {
             <div className={`header--background__overlay`}></div>
             <section className="inner-container">
                 <NavBar setClass={setClass} />
+                {setClass === 'home' && <div className="header--title"><h1>KAM Online</h1><h2>Kwaliteit, Arbo en Milieu</h2></div>}
             </section>
         </header>
 );
