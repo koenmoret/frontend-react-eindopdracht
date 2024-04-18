@@ -4,6 +4,7 @@ import Home from "./pages/home/Home.jsx";
 import Products from "./pages/products/Products.jsx";
 import { AuthContext } from './context/AuthContext.jsx';
 
+
 import "./components/global/Global.css";
 
 
