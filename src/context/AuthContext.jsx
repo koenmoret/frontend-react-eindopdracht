@@ -12,8 +12,8 @@ function AuthContextProvider({ children }) {
   });
   const navigate = useNavigate();
 
-  function login() {
-    console.log('Gebruiker is ingelogd!');
+  function login(jwt) {
+    console.log('Gebruiker is ingelogd!: '+ jwt);
     setAuth({
       ...auth,
       isAuth: true,
@@ -23,7 +23,7 @@ function AuthContextProvider({ children }) {
         id: "",
       },
     });
-    navigate('/dashboard');
+    //navigate('/dashboard');
   }
 
   function logout() {

@@ -8,6 +8,7 @@ import { AuthContext } from './context/AuthContext.jsx';
 import "./components/global/Global.css";
 
 import Register from "./components/global/Register.jsx";
+import Login from "./components/global/Login.jsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<Products/>}/>
                 <Route path="/Register" element={<Register/>}/>
+                <Route path="/Login" element={<Login/>}/>
             </Routes>
         </>
     )

@@ -4,10 +4,10 @@ import axios from "axios";
 function Register({isLoginFormOpen, setLoginFormOpen}) {
 
     const [values, setValues] = useState({
-        username: "",
-        email: "",
+        username: "koen",
+        email: "kvmoret.ica@gmail.com",
         confirmEmail: "",
-        password: ""
+        password: "12345678"
     });
 
     const [errors, setErrors] = useState("");
@@ -22,14 +22,14 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
         //if (err.fullName === "" && err.registerEmail === "" && err.registerPassword === "") {
 
         try {
-            const response = await axios.post("https://api.datavortex.nl/kamonline/users", {
-                username: "Koen",
-                email: "kvmoret@gmail.com",
-                password: "12345678",
+            const response = await axios.post("https://api.datavortex.nl/kamonlinenovi/users", {
+                username: values.username,
+                email: values.email,
+                password: values.password,
             }, {
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-Api-Key': 'kamonline:iTJlC19urHBbchBzvk7T'
+                    'X-Api-Key': 'kamonlinenovi:rv8l37E54HZfMeCdH9VT'
                 }
             });
             if (response.status === 200) {
@@ -55,7 +55,7 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
                            onChange={handleInput}
                     />
                     <label className="form-label" form="fullName">Naam</label>
-                    {errors.fullName && <span className="text-danger"> {errors.fullName}</span>}
+                    {errors.username && <span className="text-danger"> {errors.username}</span>}
                 </div>
                 <div className="form-outline mb-4">
                     <input type="email"
@@ -65,7 +65,7 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
                            onChange={handleInput}
                     />
                     <label className="form-label" form="registerEmail">Email adres</label>
-                    {errors.registerEmail && <span className="text-danger"> {errors.registerEmail}</span>}
+                    {errors.email && <span className="text-danger"> {errors.email}</span>}
                 </div>
 
                 {/*Confirm Email input*/}
@@ -89,7 +89,7 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
                            onChange={handleInput}
                     />
                     <label className="form-label" form="registerPassword">Wachtwoord</label>
-                    {errors.registerPassword && <span className="text-danger"> {errors.registerPassword}</span>}
+                    {errors.password && <span className="text-danger"> {errors.password}</span>}
                 </div>
 
                 {/*Submit button*/}
