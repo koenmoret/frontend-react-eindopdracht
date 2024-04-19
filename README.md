@@ -1,10 +1,10 @@
 # dependencies
 
 # react-router-dom
-Navigate, Route, Routes
+useNavigate, Route, Routes
 
 # React
-useContext
+createContext, useContext, useState
 
 # Axios
 axios

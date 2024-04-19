@@ -6,23 +6,39 @@ export const AuthContext = createContext({});
 
 // eslint-disable-next-line react/prop-types
 function AuthContextProvider({ children }) {
-  const [isAuth, toggleIsAuth] = useState(false);
+  const [auth, setAuth] = useState({
+    isAuth: false,
+    user: null
+  });
   const navigate = useNavigate();
 
   function login() {
     console.log('Gebruiker is ingelogd!');
-    toggleIsAuth(true);
+    setAuth({
+      ...auth,
+      isAuth: true,
+      user: {
+        username: "",
+        email: "",
+        id: "",
+      },
+    });
     navigate('/dashboard');
   }
 
   function logout() {
     console.log('Gebruiker is uitgelogd!');
-    toggleIsAuth(false);
+    setAuth({
+      ...auth,
+      isAuth: false,
+      user: null
+    });
     navigate('/');
   }
 
   const contextData = {
-    isAuth,
+    isAuth: auth.isAuth,
+    user: auth.user,
     login,
     logout,
   };
