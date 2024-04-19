@@ -7,6 +7,8 @@ import { AuthContext } from './context/AuthContext.jsx';
 
 import "./components/global/Global.css";
 
+import Register from "./components/global/Register.jsx";
+
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<Products/>}/>
-
+                <Route path="/Register" element={<Register/>}/>
             </Routes>
         </>
     )
