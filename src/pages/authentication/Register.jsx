@@ -1,5 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
+import {NavLink} from "react-router-dom";
 
 function Register({isLoginFormOpen, setLoginFormOpen}) {
 
@@ -45,6 +46,9 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
 
     return (
         <>
+            <main className="outer-container">
+                <section className="inner-container login">
+                    <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>
             <form action="" onSubmit={handleSubmit}>
                 {/*Email input*/}
                 <div className="form-outline mb-4">
@@ -97,11 +101,12 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
 
                 {/*Register buttons*/}
                 <div className="text-center">
-                    <p>Al een account? <span className="btn btn-primary"
-                                             >Inloggen</span>
+                    <p>Al een account? <span className="btn btn-primary"><NavLink to="/login">Inloggen</NavLink></span>
                     </p>
                 </div>
             </form>
+                </section>
+            </main>
         </>)
 }
 

@@ -10,7 +10,7 @@
 /*////////////////////////
     1. Typography
 ////////////////////////*/
-.header--title h1 {
+.login .header--title h1 {
   line-height: 1em;
   color: #ababab;
 }
@@ -32,7 +32,7 @@ main {
   margin-top: 10vH;
   border: 1px solid #e6e6e6;
 }
-.header--title {
+.login .header--title {
   flex-basis: 300px;
 }
 .login form {

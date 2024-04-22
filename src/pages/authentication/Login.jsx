@@ -1,9 +1,11 @@
 //import Validation from "../helpers/LoginValidation.js";
+import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
 import "./Authentication.css"
+
 
 // eslint-disable-next-line react/prop-types
 function Login() {
@@ -55,7 +57,7 @@ function Login() {
         <>
             <main className="outer-container">
                 <section className="inner-container login">
-                    <div className="header--title"><h1>KAM Online</h1></div>
+                    <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>
                         <form action="" onSubmit={handleSubmit}>
                             {/*Email input*/}
                             <div className="form-outline mb-4">
@@ -97,8 +99,7 @@ function Login() {
 
                             {/*Register buttons*/}
                             <div className="text-center">
-                                <p>Geen account? <span className="btn btn-primary"
-                                >Registreer</span>
+                                <p>Geen account? <span className="btn btn-primary"><NavLink to="/register">Registreer</NavLink></span>
                                 </p>
                             </div>
                         </form>
