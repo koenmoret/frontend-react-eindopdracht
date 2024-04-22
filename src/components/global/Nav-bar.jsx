@@ -27,7 +27,7 @@ function NavBar({setClass}) {
                             <li><span className="nav-item">Nieuws</span></li>
                         </>}
                         {isAuth ? <li><span className="nav-item">Logout</span></li> :
-                            <li><span className="nav-item">Login</span></li>}
+                            <li><NavLink to="/login"><span className="nav-item">Login</span></NavLink></li>}
                         <li>
                             <span className="fa-shopping-cart">
                                <FaShoppingCart/>

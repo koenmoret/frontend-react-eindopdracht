@@ -1,0 +1,68 @@
+/*////////////////////////
+    Table of Contents
+    1. Typography
+    2. Areas
+        2.1 Main
+        2.2 Login
+    3. Media Queries
+////////////////////////*/
+
+/*////////////////////////
+    1. Typography
+////////////////////////*/
+.header--title h1 {
+  line-height: 1em;
+  color: #ababab;
+}
+
+/*////////////////////////
+    2. Areas
+////////////////////////*/
+/*/////////
+2.1 Main
+/////////*/
+main {
+  align-items: center;
+}
+/*/////////
+2.2 Login
+/////////*/
+.login  {
+  flex-basis: 30em;
+  margin-top: 10vH;
+  border: 1px solid #e6e6e6;
+}
+.header--title {
+  flex-basis: 300px;
+}
+.login form {
+  width: 100%;
+  padding: 1.5rem;
+}
+.login input.form-control {
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+/*////////////////////////
+    4. Media
+////////////////////////*/
+@media screen and (max-width: 1200px) {
+    /* voor desktops en groter */
+
+}
+
+@media screen and (max-width: 900px) {
+    /* voor tablets */
+
+}
+
+@media screen and (max-width: 578px) {
+    /* voor gsm */
+}
+

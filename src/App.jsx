@@ -7,8 +7,8 @@ import { AuthContext } from './context/AuthContext.jsx';
 
 import "./components/global/Global.css";
 
-import Register from "./components/global/Register.jsx";
-import Login from "./components/global/Login.jsx";
+import Register from "./pages/authentication/Register.jsx";
+import Login from "./pages/authentication/Login.jsx";
 
 
 function App() {
