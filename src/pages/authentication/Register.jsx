@@ -1,14 +1,17 @@
 import {useState} from "react";
 import axios from "axios";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
-function Register({isLoginFormOpen, setLoginFormOpen}) {
+
+function Register() {
+
+    const navigate = useNavigate();
 
     const [values, setValues] = useState({
-        username: "koen",
-        email: "kvmoret.ica@gmail.com",
+        username: "",
+        email: "",
         confirmEmail: "",
-        password: "12345678"
+        password: ""
     });
 
     const [errors, setErrors] = useState("");
@@ -24,9 +27,9 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
 
         try {
             const response = await axios.post("https://api.datavortex.nl/kamonlinenovi/users", {
-                username: values.username,
-                email: values.email,
-                password: values.password,
+                username: `${values.username}`,
+                email: `${values.email}`,
+                password: `${values.password}`,
             }, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -35,6 +38,7 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
             });
             if (response.status === 200) {
                 console.log("Gebruiker is geregistreerd");
+                navigate('/Login');
             }
         } catch (e) {
             console.error(e);
@@ -50,25 +54,26 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
                 <section className="inner-container login">
                     <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>
             <form action="" onSubmit={handleSubmit}>
-                {/*Email input*/}
+                {/*Username input*/}
                 <div className="form-outline mb-4">
                     <input type="text"
-                           name="fullName"
-                           id="fullName"
+                           name="username"
+                           id="username"
                            className="form-control"
                            onChange={handleInput}
                     />
-                    <label className="form-label" form="fullName">Naam</label>
+                    <label className="form-label" form="username">Gebruikersnaam</label>
                     {errors.username && <span className="text-danger"> {errors.username}</span>}
                 </div>
+                {/*Email input*/}
                 <div className="form-outline mb-4">
                     <input type="email"
-                           name="registerEmail"
-                           id="registerEmail"
+                           name="email"
+                           id="email"
                            className="form-control"
                            onChange={handleInput}
                     />
-                    <label className="form-label" form="registerEmail">Email adres</label>
+                    <label className="form-label" form="email">Email adres</label>
                     {errors.email && <span className="text-danger"> {errors.email}</span>}
                 </div>
 
@@ -87,12 +92,12 @@ function Register({isLoginFormOpen, setLoginFormOpen}) {
                 {/*Password input*/}
                 <div className="form-outline mb-4">
                     <input type="password"
-                           name="registerPassword"
-                           id="registerPassword"
+                           name="password"
+                           id="password"
                            className="form-control"
                            onChange={handleInput}
                     />
-                    <label className="form-label" form="registerPassword">Wachtwoord</label>
+                    <label className="form-label" form="password">Wachtwoord</label>
                     {errors.password && <span className="text-danger"> {errors.password}</span>}
                 </div>
 

@@ -1,7 +1,7 @@
 # dependencies
 
 # react-router-dom
-useNavigate, Route, Routes
+NavLink, useNavigate, Route, Routes
 
 # React
 createContext, useContext, useState
