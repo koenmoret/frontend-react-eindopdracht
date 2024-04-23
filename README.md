@@ -23,3 +23,6 @@ Headers: {
 'Content-Type': 'application/json',
 'X-Api-Key':kamonline:iTJlC19urHBbchBzvk7T
 }
+
+# jwt-decode
+jwtDecode
