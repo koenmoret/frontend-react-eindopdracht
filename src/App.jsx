@@ -1,8 +1,8 @@
-import {useContext} from "react";
+//import {useContext} from "react";
 import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
 import Products from "./pages/products/Products.jsx";
-import { AuthContext } from './context/AuthContext.jsx';
+//import { AuthContext } from './context/AuthContext.jsx';
 
 
 import "./components/global/Global.css";
@@ -13,7 +13,7 @@ import Login from "./pages/authentication/Login.jsx";
 
 function App() {
 
-    const {isAuth} = useContext(AuthContext);
+    //const {isAuth} = useContext(AuthContext);
 
     return (
         <>

@@ -1,8 +1,8 @@
 import './Nav-bar.css';
 import {FaShoppingCart} from "react-icons/fa";
 import {NavLink} from "react-router-dom";
-
 import { AuthContext } from '../../context/AuthContext.jsx';
+import {CartContext} from "../../context/CartContext.jsx";
 import {useContext} from "react";
 
 
@@ -11,6 +11,7 @@ import {useContext} from "react";
 function NavBar({setClass}) {
 
     const { isAuth, logout } = useContext(AuthContext);
+    const { getCartItems } = useContext(CartContext);
 
     return (
         <>
@@ -30,6 +31,8 @@ function NavBar({setClass}) {
                         <li>
                             <span className="fa-shopping-cart">
                                <FaShoppingCart/>
+                                {getCartItems > 0 &&
+                                    <span className="cart-counter">{getCartItems}</span>}
                             </span>
                         </li>
                     </ul>
