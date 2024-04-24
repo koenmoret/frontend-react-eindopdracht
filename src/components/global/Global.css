@@ -71,6 +71,9 @@ a:hover {
     padding: 0 15px;
     border-radius: 0.25rem;
 }
+.danger {
+    border: 2px solid red!important;
+}
 
 /*////////////////////////
     2. Typography
@@ -116,6 +119,7 @@ a:visited {
 .text-danger {
     color: var(--color-red);
     font-weight: 300;
+    margin-left: 10px;
 }
 
 /*////////////////////////

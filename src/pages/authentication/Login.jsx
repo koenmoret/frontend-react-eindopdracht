@@ -18,9 +18,10 @@ function Login() {
         password: ""
     });
 
-
-    const [errors, setErrors] = useState("");
-
+    const [errors, setErrors] = useState({
+        username: false,
+        password: false
+    });
 
     const handleInput = (event) => {
         setValues(prev => ({...prev, [event.target.name]: [event.target.value]}));
@@ -28,10 +29,7 @@ function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        //const err = Validation(values);
-        //setErrors(err);
 
-        //if (err.email === "" && err.password === "") {
         try {
             const response = await axios.post("https://api.datavortex.nl/kamonlinenovi/users/authenticate", {
                     username: `${values.username}`,
@@ -48,10 +46,17 @@ function Login() {
                 login(response.data.jwt);
                 navigate("/");
             }
-        } catch (e) {
-            console.error(e);
+        } catch (error) {
+            if (error.response && error.response.status === 400) {
+                setErrors({ username: true });
+            }
+            if (error.response && error.response.status === 401) {
+                setErrors({ password: true });
+            }
+            else {
+                console.error(error);
+            }
         }
-        // }
     }
 
     return (
@@ -63,31 +68,22 @@ function Login() {
                         {/*Username input*/}
                         <div className="form-outline mb-4">
                             <input type="text" name="username" id="username" onChange={handleInput}
-                                   className="form-control username" required/>
+                                   className={`form-control username ${errors.username && 'danger'}`}  required/>
                             <label className="form-label" form="username"
                                    style={{display: values.username ? 'none' : 'block'}}>Gebruikersnaam</label>
-                            {errors.username && <span className="text-danger"> {errors.username}</span>}
+                            {errors.username && <span className="text-danger">Gebruikersnaam onbekend</span>}
                         </div>
 
                         {/*Password input*/}
                         <div className="form-outline mb-4">
                             <input type="password" name="password" id="loginPassword" onChange={handleInput}
-                                   className="form-control" required/>
+                                   className={`form-control ${errors.password && 'danger'}`} required/>
                             <label className="form-label" form="loginPassword"
                                    style={{display: values.password ? 'none' : 'block'}}>Wachtwoord</label>
-                            {errors.password && <span className="text-danger"> {errors.password}</span>}
+                            {errors.password && <span className="text-danger">Onjuist wachtwoord</span>}
                         </div>
 
-                        {/*2 column grid layout for inline styling*/}
                         <div className="row mb-4">
-                            <div className="col d-flex justify-content-center">
-                                {/*Checkbox*/}
-                                {/*<div className="form-check">*/}
-                                {/*    <input className="form-check-input" type="checkbox" value="" id="form2Example3" checked />*/}
-                                {/*    <label className="form-check-label" form="form2Example3"> Onthoud mij </label>*/}
-                                {/*</div>*/}
-                            </div>
-
                             <div className="col">
                                 {/*Simple link*/}
                                 <span>Wachtwoord vergeten?</span>

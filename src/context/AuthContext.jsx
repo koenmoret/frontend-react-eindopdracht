@@ -27,7 +27,6 @@ function AuthContextProvider({ children }) {
   const navigate = useNavigate();
 
   const login = async (jwt) => {
-    console.log(jwtDecode(jwt));
     const decodedToken = jwtDecode(jwt);
     const userid = decodedToken.userId;
     localStorage.setItem("token", jwt);
