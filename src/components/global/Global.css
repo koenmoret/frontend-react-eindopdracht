@@ -74,6 +74,9 @@ a:hover {
 .danger {
     border: 2px solid red!important;
 }
+.form-label.active {
+    display: none;
+}
 
 /*////////////////////////
     2. Typography

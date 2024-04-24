@@ -1,10 +1,10 @@
-//import Validation from "../helpers/LoginValidation.js";
 import {NavLink, useNavigate} from "react-router-dom";
-import axios from "axios";
+//import axios from "axios";
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
 import "./Authentication.css"
+import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
 
 
 // eslint-disable-next-line react/prop-types
@@ -18,6 +18,11 @@ function Login() {
         password: ""
     });
 
+    const [touched, setTouched] = useState({
+        username: false,
+        password: false
+    });
+
     const [errors, setErrors] = useState({
         username: false,
         password: false
@@ -25,38 +30,31 @@ function Login() {
 
     const handleInput = (event) => {
         setValues(prev => ({...prev, [event.target.name]: [event.target.value]}));
+        setErrors({ username: false, password: false });
+        if (event.target.value === "") {
+            setTouched(prev => ({...prev, [event.target.name]: false}));
+        } else {
+            setTouched(prev => ({...prev, [event.target.name]: true}));
+        }
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        try {
-            const response = await axios.post("https://api.datavortex.nl/kamonlinenovi/users/authenticate", {
-                    username: `${values.username}`,
-                    password: `${values.password}`,
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-Api-Key': 'kamonlinenovi:rv8l37E54HZfMeCdH9VT'
-                    }
-                });
-            if (response.status === 200) {
-                console.log("Gebruiker is ingelogd");
-                login(response.data.jwt);
-                navigate("/");
+        checkAuthenticateValidity(values, login).then(validation => {
+            if (validation.status && validation.status === 200) {
+                // Als de validatie succesvol is, ga door met de volgende actie, bijv. doorverwijzen naar een andere pagina
+                navigate('/');
+            } else if (validation.status === 400) {
+                setErrors({username: true});
+            } else if (validation.status === 401) {
+                setErrors({password: true});
             }
-        } catch (error) {
-            if (error.response && error.response.status === 400) {
-                setErrors({ username: true });
-            }
-            if (error.response && error.response.status === 401) {
-                setErrors({ password: true });
-            }
-            else {
-                console.error(error);
-            }
-        }
+        })
+        .catch(error => {
+            console.error("Er is een fout opgetreden bij het inloggen:", error);
+        });
+
     }
 
     return (
@@ -68,9 +66,9 @@ function Login() {
                         {/*Username input*/}
                         <div className="form-outline mb-4">
                             <input type="text" name="username" id="username" onChange={handleInput}
-                                   className={`form-control username ${errors.username && 'danger'}`}  required/>
-                            <label className="form-label" form="username"
-                                   style={{display: values.username ? 'none' : 'block'}}>Gebruikersnaam</label>
+                                   className={`form-control username ${errors.username && 'danger'}`} required/>
+                            <label className={`form-label ${touched.username ? 'active' : ''}`}
+                                   form="username">Gebruikersnaam</label>
                             {errors.username && <span className="text-danger">Gebruikersnaam onbekend</span>}
                         </div>
 
@@ -78,8 +76,8 @@ function Login() {
                         <div className="form-outline mb-4">
                             <input type="password" name="password" id="loginPassword" onChange={handleInput}
                                    className={`form-control ${errors.password && 'danger'}`} required/>
-                            <label className="form-label" form="loginPassword"
-                                   style={{display: values.password ? 'none' : 'block'}}>Wachtwoord</label>
+                            <label className={`form-label ${touched.password ? 'active' : ''}`}
+                                   form="loginPassword">Wachtwoord</label>
                             {errors.password && <span className="text-danger">Onjuist wachtwoord</span>}
                         </div>
 
