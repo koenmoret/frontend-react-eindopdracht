@@ -1,5 +1,5 @@
 //import Validation from "../helpers/LoginValidation.js";
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import axios from "axios";
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
@@ -11,6 +11,7 @@ import "./Authentication.css"
 function Login() {
 
     const {login} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [values, setValues] = useState({
         username: "",
@@ -36,7 +37,6 @@ function Login() {
                     username: `${values.username}`,
                     password: `${values.password}`,
                 },
-
                 {
                     headers: {
                         'Content-Type': 'application/json',
@@ -46,6 +46,7 @@ function Login() {
             if (response.status === 200) {
                 console.log("Gebruiker is ingelogd");
                 login(response.data.jwt);
+                navigate("/");
             }
         } catch (e) {
             console.error(e);
@@ -98,7 +99,8 @@ function Login() {
 
                         {/*Register buttons*/}
                         <div className="text-center">
-                            <p>Geen account? <span className="btn btn-primary"><NavLink to="/register">Registreer</NavLink></span>
+                            <p>Geen account? <span className="btn btn-primary"><NavLink
+                                to="/register">Registreer</NavLink></span>
                             </p>
                         </div>
                     </form>

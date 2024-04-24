@@ -10,7 +10,7 @@ import {useContext} from "react";
 // eslint-disable-next-line react/prop-types
 function NavBar({setClass}) {
 
-    const { isAuth } = useContext(AuthContext);
+    const { isAuth, logout } = useContext(AuthContext);
 
     return (
         <>
@@ -23,11 +23,10 @@ function NavBar({setClass}) {
                         <li><NavLink to="/products"
                                      className={({isActive}) => isActive ? 'nav-item active-link' : 'nav-item default-link'}>Producten</NavLink>
                         </li>
-                        {isAuth && <><li><span className="nav-item">Dashboard</span></li>
-                            <li><span className="nav-item">Nieuws</span></li>
-                        </>}
-                        {isAuth ? <li><span className="nav-item">Logout</span></li> :
-                            <li><NavLink to="/login"><span className="nav-item">Login</span></NavLink></li>}
+                        <li><span className="nav-item">Nieuws</span></li>
+                        {isAuth && <><li><span className="nav-item">Dashboard</span></li></>}
+                        {isAuth ? <li><span className="nav-item" onClick={logout}>Logout</span></li> :
+                                  <li><NavLink to="/login"><span className="nav-item">Login</span></NavLink></li>}
                         <li>
                             <span className="fa-shopping-cart">
                                <FaShoppingCart/>
