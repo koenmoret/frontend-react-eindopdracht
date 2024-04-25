@@ -9,6 +9,7 @@ import "./components/global/Global.css";
 
 import Register from "./pages/authentication/Register.jsx";
 import Login from "./pages/authentication/Login.jsx";
+import Checkout from "./pages/checkout/Checkout.jsx";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/products" element={<Products/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/checkout" element={<Checkout />}/>
             </Routes>
         </>
     )

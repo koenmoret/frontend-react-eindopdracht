@@ -24,6 +24,7 @@ function AuthContextProvider({ children }) {
     user: null,
     status: "pending"
   });
+
   const navigate = useNavigate();
 
   const login = async (jwt) => {

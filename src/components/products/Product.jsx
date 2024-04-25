@@ -2,7 +2,8 @@
 function Product({image, altText, title, text, disabled, product }) {
 
     const handleButtonClick = () => {
-        product[0](product[1]);
+        // functie, productnaam, status, waarde winkelmand
+        product[0](product[1],true,+1);
     };
 
     return (

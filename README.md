@@ -26,3 +26,6 @@ Headers: {
 
 # jwt-decode
 jwtDecode
+
+# js-cookie
+cookie

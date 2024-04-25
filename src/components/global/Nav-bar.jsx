@@ -24,16 +24,18 @@ function NavBar({setClass}) {
                         <li><NavLink to="/products"
                                      className={({isActive}) => isActive ? 'nav-item active-link' : 'nav-item default-link'}>Producten</NavLink>
                         </li>
-                        <li><span className="nav-item">Nieuws</span></li>
-                        {isAuth && <><li><span className="nav-item">Dashboard</span></li></>}
+
+                        {isAuth && <><li><span className="nav-item">Nieuws</span></li>
+                                     <li><span className="nav-item">Dashboard</span></li>
+                                   </>}
                         {isAuth ? <li><span className="nav-item" onClick={logout}>Logout</span></li> :
                                   <li><NavLink to="/login"><span className="nav-item">Login</span></NavLink></li>}
-                        <li>
+                        <li><NavLink to="/checkout">
                             <span className="fa-shopping-cart">
                                <FaShoppingCart/>
                                 {getCartItems > 0 &&
                                     <span className="cart-counter">{getCartItems}</span>}
-                            </span>
+                            </span></NavLink>
                         </li>
                     </ul>
                 </nav>
