@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-function Product({image, altText, title, text, btntext, disabled, action  }) {
+function Elearning({image, altText, title, text, btntext, disabled, action  }) {
 
     const handleButtonClick = () => {
         action();
@@ -17,4 +17,4 @@ function Product({image, altText, title, text, btntext, disabled, action  }) {
     );
 }
 
-export default Product;
+export default Elearning;

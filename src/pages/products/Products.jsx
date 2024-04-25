@@ -1,18 +1,21 @@
 import Header from "../../components/global/Header.jsx";
 import Product from "../../components/products/Product.jsx";
 import {CartContext} from "../../context/CartContext.jsx";
+import {useContext} from "react";
 
 import "./Products.css"
 import kwaliteit from "../../assets/images/kwaliteit.png";
 import arbo from "../../assets/images/arbo.png";
-import {useContext} from "react";
-
 
 
 // eslint-disable-next-line react/prop-types
 function Products() {
 
     const {getProductKwaliteit, getProductArbo, setCart } = useContext(CartContext);
+
+    const addToCart = (productName) => {
+        setCart(productName, true, +1);
+    };
 
     return (
         <>
@@ -26,16 +29,18 @@ function Products() {
                             altText="image of a person in a factory"
                             title="Basistraining Kwaliteit"
                             text="Deze training leert je alles over basisvoorwaarden voor het produceren van veilig voedsel. Daar heeft iedereen in het bedrijf invloed op, dus ook jij."
+                            btntext="Aanschaffen 25,-"
                             disabled={getProductKwaliteit && "disabled"}
-                            product={[setCart,"productKwaliteit"]}
+                            action={() => addToCart("productKwaliteit")}
                         />
                         <Product
                             image={arbo}
                             altText="image of a person in a factory"
                             title="Basistraining Arbo"
                             text="Het is belangrijk dat je weet welke risico's je loopt op je werk en hoe je ongevallen kunt voorkomen. Daar leer je meer over in deze basistraining."
+                            btntext="Aanschaffen 25,-"
                             disabled={getProductArbo && "disabled"}
-                            product={[setCart,"productArbo"]}
+                            action={() => addToCart("productArbo")}
                         />
                     </article>
                 </section>

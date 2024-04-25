@@ -38,9 +38,9 @@ function Checkout() {
                 //setCart("productArbo",true, -1);
             }
             if (!isAuth) {
-                //navigate('/login');
+                navigate('/login');
             } else {
-                //navigate('/');
+                navigate('/dashboard');
             }
         } else {
             setErrors({products: false});

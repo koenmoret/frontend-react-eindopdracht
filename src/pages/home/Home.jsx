@@ -5,12 +5,9 @@ import {useContext} from "react";
 
 function Home() {
 
-    const {user, isAuth} = useContext(AuthContext);
-
     return (
         <>
             <Header setClass="home"/>
-            {isAuth ? <p>Welkom {user.username}</p> : <p>Welkom gebruiker</p>}
         </>
     );
 }
