@@ -85,7 +85,65 @@
       "title": "Basistraining Arbo",
       "description": "Het is belangrijk dat je weet welke risico's je loopt op je werk en hoe je ongevallen kunt voorkomen. Daar leer je meer over in deze basistraining.",
       "image": "arbo.png",
-      "hoofdstukken": []
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introductie",
+          "image": ["intro.png"],
+          "html": "<div class='inner-container-page__text'><span class='titel'>Welkom bij de Basistraining Arbo</span><br><br><p>Het is belangrijk dat je weet welke risico's je loopt op je werk en hoe je ongevallen kunt voorkomen. Daar leer je meer over in deze basistraining. Het kost ongeveer een uur om de training helemaal te volgen.</p><br><p>Je leert over:</p><br><ul><li>de gevaren van het werken met machines</li><li>hoe je gevaarlijke stoffen kunt herkennen</li><li>welke veiligheidsmaatregelen je moet nemen als je op een heftruck rijdt of op hoogte moet werken</li><li>wat PBM's zijn</li><li>en nog veel meer</li></ul><br><p>Tussendoor worden vragen gesteld. Dit zijn oefenvragen die niet meetellen voor de beoordeling. Soms kun je de antwoorden vinden in de tekst. Bij andere vragen moet je nadenken over je eigen werkplek.</p><br><p>Je kunt tussendoor stoppen met de training en later weer verdergaan op de plek waar je bent gebleven.</p><br><p>Aan het eind van de training krijg je een toets van 15 vragen. Haal een score van 80% om te slagen voor de training!</p><br><p>Deze training is gemaakt in samenwerking met veiligheidsdeskundigen die werken in de voedingsmiddelenindustrie.</p><br><p>Succes!</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/intro.png alt='afbeelding spijker in schoenzool'></div>"
+        },
+        {
+          "id": 2,
+          "title": "Hoofdstuk 1",
+          "image": ["h1.jpg"],
+          "html": "<div class='inner-container-page__text'><span class='titel'>Hoofdstuk 1. Veilig werken in Nederland</span><br><br><p>Er vinden jaarlijks nogal wat bedrijfsongevallen plaats in Nederland. Het RIVM heeft uitgezocht dat er jaarlijks ongeveer 2.300 ernstige ongevallen plaatsvinden. In totaal zijn er meer dan 200.000 ongevallen per jaar waarbij medewerkers fysiek of geestelijk letsel oplopen. In 80 procent van de ongevallen is de mens direct verantwoordelijk.</p><br><p>Belangrijk is dus dat we met zijn allen zorgen voor een veilige werkomgeving voor:</p><br><ul><li>jezelf</li><li>je collega’s</li><li>iedereen om je heen</li></ul><br><p>Zodat iedereen aan het eind van een werkdag weer gezond thuis komt.</p><br><p>Dát is wat we willen voor alle medewerkers. Jij speelt daarbij een hele belangrijke rol!</p><br><p>Succes!</p><br><img src=/src/assets/images/productArbo/1/h1.jpg alt='afbeelding Veilig werken in Nederland'></div><div class='inner-container-page__img'></div>",
+          "pages": [
+            {
+            "id": 1,
+            "img": [],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Leerresultaten</span><p>Wanneer je deze basistraining hebt afgerond, heb je alle bagage in huis om veilig te kunnen werken in de voedingsmiddelenindustrie.</p><br><p>Aan het eind van de training weet je:</p><br><ul><li>Hoe de wetgeving over veilige arbeidsomstandigheden in elkaar zit</li><li>Wat de risico's zijn van werken in de voedingsmiddelenindustrie</li><li>Hoe je veilig met machines werkt</li><li>Wat de gevaren zijn van teveel geluid en hitte</li><li>Hoe je veilig werkt met poederstoffen en chemische stoffen</li><li>Hoe je veilig tilt en draagt</li><li>Hoe je jezelf kunt beschermen met persoonlijke beschermingsmiddelen (PBM's)</li><li>Hoe je jezelf en je collega's veilig houdt op de werkvloer</li><li>Hoe je veilig op hoogte werkt</li><li>Wat je moet doen bij noodsituaties</li></ul><br><p>Succes!</p></div><div class='inner-container-page__img'></div>"
+            },
+            {
+            "id": 2,
+            "img": ["h1-p2.jpg"],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Verhaal over een ongeluk</span><p>Dit verhaal is gebaseerd op een echt gebeurd ongeluk in de voedingsmiddelenindustrie in Nederland. Het verhaal wordt verteld door Karin.</p><br><p>Karin werkt als operator in de suikerverwerkende industrie.</p><br><p>Karin vertelt: 'Het gebeurde op een zaterdag, dan maken wij de machines schoon. Ik maakte een suikervermaler schoon. Dat is een soort propeller van een halve meter met drie bladen. Soms blijven er klonten suiker achter in de vermaler. Er zat ook dit keer een klont suiker in.</p><br><p>Toen ik met mijn hand die klont weghaalde, ging de vermaler opeens weer draaien. Mijn hand kwam tussen de bladen. Gelukkig was er een collega in de buurt die de machine direct stil kon zetten. Hij heeft 112 gebeld.</p><br><p>Mijn hand was verbrijzeld en ik had een paar hele diepe snijwonden. Ik ben geopereerd en mijn herstel heeft maanden geduurd. Ik ben veel kracht in mijn hand verloren.</p><br><p>Er zat blijkbaar een klont suiker voor de beveiligingssensor en toen ik die weghaalde ging de vermaler weer draaien. Tegenwoordig halen we de stroom van de machine af, vóórdat we gaan schoonmaken.'</p><br><p>Ken jij een verhaal, net als dat van Karin?</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/1/p2/h1-p2.jpg alt='afbeelding 112'></div>"
+            },
+            {
+            "id": 3,
+            "img": ["h1-p3.png"],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Ongevallen</span><p>Jaarlijks komen gemiddeld 135 medewerkers uit de voedingsmiddelenindustrie op de Eerste Hulp van het ziekenhuis terecht door een ongeluk op het werk.</p><br><p>Ongeveer de helft van deze werknemers houdt zijn hele leven last van het ongeluk!</p><br><p>Er zijn ook mensen die het niet kunnen navertellen.</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/1/p3/h1-p3.png alt='afbeelding grafiek'></div>"
+            },
+            {
+            "id": 4,
+            "img": ["h1-p3.png"],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Rol van de werkgever</span><p>Je werkgever zal veel regelen om ongelukken op je werkplek te voorkomen. Dat is je werkgever ook verplicht om te doen. Denk maar eens aan de beveiliging van machines, of aan persoonlijke beschermingsmiddelen (PBM's), zoals veiligheidsschoenen.</p><br><p>Ook het verzorgen van werkinstructies voor de opslag en het gebruik van gevaarlijke stoffen horen hierbij.</p><br><p>Tot slot moet de werkgever je ook enige mate van afwisseling in het werk aanbieden. Je mag niet acht uur op een dag dezelfde, repeterende werkzaamheden uitvoeren.</p><br><p>Maar in de praktijk moet jij op de juiste manier omgaan met de gevaarlijke stoffen en de werkinstructies volgen. Dat is jouw verantwoordelijkheid.</p><br><p>Wil jij bijdragen aan een veilige werkplek voor jezelf en anderen?</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/1/p4/h1-p4.png alt='afbeelding grafiek'></div>"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Hoofdstuk 2",
+          "image": [],
+          "html": "<div class='inner-container-page__text'><span class='titel'>Hoofdstuk 2. Wetgeving</span><br><br><p>Bedrijven zijn vanuit de wet verplicht om te zorgen voor een veilige werkomgeving. Ze moeten een arbobeleid hebben waarin staat hoe ze dat doen.</p><br><p>Dit arbobeleid omvat onder andere:</p><br><ul><li>Risico-inventarisaties (een lijst maken van alle gevaren op de werkvloer)</li><li>Het nemen van maatregelen waarmee je gevaren kunt voorkomen</li><li>Voorlichting van werknemers</li><li>Maatregelen om te zorgen voor de gezondheid van werknemers</li></ul><br><p>Ook als werknemer heb je verantwoordelijkheden voor je eigen veiligheid en die van je collega's. Je bent verplicht om je aan de regels te houden.</p><br><p>In dit hoofdstuk leer je:</p><br><ul><li>Hoe de wetgeving over veilige arbeidsomstandigheden in elkaar steekt</li><li>Wat de verplichtingen van je werkgever zijn om te zorgen voor een veilige werkomgeving</li></ul></div><div class='inner-container-page__img'></div>",
+          "pages": [
+            {
+              "id": 1,
+              "img": ["h2-p1.png"],
+              "html": "<div class='inner-container-page__text'><span class='titel'>Wetgeving - drie niveaus</span><p>De wetgeving over arbeidsomstandigheden is ingedeeld in drie niveaus: de Arbowet, het Arbobesluit en de Arboregeling.</p><br><strong>Arbowet</strong><p>De Arbowet vormt de basis van de arbowetgeving. Hierin staan de algemene bepalingen die gelden voor alle plekken waar arbeid wordt verricht (dus ook voor verenigingen en stichtingen). De Arbowet is een kaderwet. Dat betekent dat er geen regels in staan over concrete risico's. Die zijn uitgewerkt in het Arbobesluit en de Arboregeling. Op de website van de overheid is de volledige tekst van de Arbowet te vinden.</p><br><strong>Arbobesluit</strong><p>Het Arbobesluit is een uitwerking van de Arbowet. Hierin staan de regels waar werkgevers en werknemers zich aan moeten houden om arbeidsrisico's tegen te gaan. Er staan ook specifieke regels in voor een aantal sectoren en categorieën werknemers. Op de website van de overheid is de volledige tekst van het Arbobesluit te vinden.</p><br><strong>Arboregeling</strong><p>De Arboregeling is weer een verdere uitwerking van het Arbobesluit. Het gaat hierbij om gedetailleerde voorschriften. Bijvoorbeeld de eisen waar arbeidsmiddelen aan moeten voldoen of hoe een arbodienst zijn wettelijke taken exact moet uitvoeren. Ook deze regels zijn verplicht voor werkgever en werknemer. Op de website van de overheid is de volledige tekst van de Arboregeling te vinden.</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/2/p1/h2-p1.png alt='afbeelding wetgeving'></div>"
+            },
+            {
+              "id": 2,
+              "img": [],
+              "html": "<div class='inner-container-page__text'><span class='titel'>Wetgeving - werknemers</span><p>Werknemers hebben recht op inspraak op het te voeren arbobeleid. Ze hebben instemmingsrecht op de RI&E, op de afspraken over de arbodienstverlening en de benoeming van de preventiemedewerker. Dat gaat via de ondernemingsraad, personeelsvereniging en vakbonden. Die vertegenwoordigen de werknemers.</p><br><strong>De Nederlandse Arbeidsinspectie</strong><p>De Nederlandse Arbeidsinspectie controleert regelmatig of werkgevers én werknemers zich aan de arboregels houden. Ze letten daarbij het meest op werksituaties die ernstige gezondheidsrisico’s met zich meebrengen. Bij overtreding kan de Arbeidsinspectie een aantal maatregelen opleggen. Bijvoorbeeld een waarschuwing of een boete of zelfs stillegging van het werk.</p></div><div class='inner-container-page__img'></div>"
+            },
+            {
+              "id": 3,
+              "img": ["h2-p3.png"],
+              "html": "<div class='inner-container-page__text'><span class='titel'>Risico-Inventarisatie en -Evaluatie</span><p>Een RI&E (Risico-Inventarisatie en -Evaluatie) is verplicht voor alle werkgevers. Ook jouw werkgever heeft er een. Het RI&E is een lijst met alle mogelijke risico's binnen het bedrijf. Die lijst kan het bedrijf gebruiken om de risico's te verkleinen of weg te halen.</p><br><p>Voor verschillende sectoren in de voedingsmiddelenindustrie zijn speciale RI&E-instrumenten ontwikkeld. Zo'n instrument beschrijft de belangrijkste risico’s in de sector en helpt om een RI&E op te stellen voor het bedrijf.</p><br><p>Je kunt hierover in je eigen bedrijf altijd vragen stellen aan de collega die Arbo in zijn takenpakket heeft. Dit kan bijvoorbeeld de preventiemedewerker zijn, de veiligheidsdeskundige of een KAM-medewerker.</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productArbo/2/p3/h2-p3.png alt='afbeelding RI&E'></div>"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
