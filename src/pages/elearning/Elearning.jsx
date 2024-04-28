@@ -175,12 +175,18 @@ function Elearning() {
                         </div>
                     </div>
                     <div className="elearning--nav">
-                        {(!showPageViewer && (currentChapterIndex === product.chapters.length - 1 || !product.chapters[currentChapterIndex].pages)) && (
+                        {/*{(!showPageViewer && (currentChapterIndex === product.chapters.length - 1 || !product.chapters[currentChapterIndex].pages)) && (*/}
+                        {/*    <button onClick={handleNextChapter}>Volgend hoofdstuk</button>*/}
+                        {/*)}*/}
+                        {(!product.chapters[currentChapterIndex].pages) && (
                             <button onClick={handleNextChapter}>Volgend hoofdstuk</button>
                         )}
                         {!showPageViewer && (
                             <div>
-                                {currentChapterIndex !== product.chapters.length - 1 && product.chapters[currentChapterIndex].pages && (
+                                {/*{currentChapterIndex !== product.chapters.length - 1 && product.chapters[currentChapterIndex].pages && (*/}
+                                {/*    <button onClick={handleShowPageViewer}>Volgende pagina</button>*/}
+                                {/*)}*/}
+                                {product.chapters[currentChapterIndex].pages && (
                                     <button onClick={handleShowPageViewer}>Volgende pagina</button>
                                 )}
                             </div>
