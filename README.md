@@ -1,7 +1,7 @@
 # dependencies
 
 # react-router-dom
-NavLink, useNavigate, Route, Routes
+NavLink, useNavigate, Route, Routes, useLocation
 
 # React
 createContext, useContext, useState
@@ -29,3 +29,8 @@ jwtDecode
 
 # js-cookie
 cookie
+
+# sanitize-html
+/* Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing */ 
+sanitizeHtml 
+

@@ -4,8 +4,8 @@ import Header from "../../components/global/Header.jsx";
 import {CartContext} from "../../context/CartContext.jsx";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
-import kwaliteit from "../../assets/images/kwaliteit.png";
-import arbo from "../../assets/images/arbo.png";
+import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
+import arbo from "../../assets/images/productArbo/arbo.png";
 import "./Checkout.css";
 
 // eslint-disable-next-line react/prop-types

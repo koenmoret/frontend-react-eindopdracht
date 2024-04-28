@@ -28,12 +28,24 @@ function CartContextProvider({children}) {
         //Cookies.set("products", products, { expires: 365 });
     }
 
-    function setPurchased(product,status, value) {
-        setProducts(prevProducts => ({
-            ...prevProducts,
-            [product]: status,
-            cartItems: products.cartItems + value
-        }));
+    // function setPurchased(product,status, value) {
+    //     setProducts(prevProducts => ({
+    //         ...prevProducts,
+    //         [product]: status,
+    //         cartItems: products.cartItems + value
+    //     }));
+    //     //Cookies.set("products", products, { expires: 365 });
+    // }
+
+    function setPurchased(product, status, value) {
+        setProducts(prevProducts => {
+            const updatedCartItems = prevProducts.cartItems + value;
+            return {
+                ...prevProducts,
+                [product]: status,
+                cartItems: updatedCartItems
+            };
+        });
         //Cookies.set("products", products, { expires: 365 });
     }
 

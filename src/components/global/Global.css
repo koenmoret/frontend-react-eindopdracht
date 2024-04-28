@@ -124,6 +124,9 @@ a:visited {
     font-weight: 300;
     margin-left: 10px;
 }
+strong {
+    font-weight: 700;
+}
 
 /*////////////////////////
     3. Areas

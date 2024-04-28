@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "id": "productKwaliteit",
+      "title": "Basistraining Kwaliteit",
+      "description": "Deze training leert je alles over basisvoorwaarden voor het produceren van veilig voedsel. Daar heeft iedereen in het bedrijf invloed op, dus ook jij.",
+      "image": "kwaliteit.png",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Introductie",
+          "image": ["h1.jpg"],
+          "html": "<div class='inner-container-page__text'><span class='titel'>Welkom bij de Basistraining Kwaliteit</span><br><br><p>Deze training leert je alles over basisvoorwaarden voor het produceren van veilig voedsel. Daar heeft iedereen in het bedrijf invloed op, dus ook jij. De training duurt 1 tot 2 uur.</p><p>Aan het eind van sommige hoofdstukken vind je een actielijst die je kan helpen om te werken volgens de basisvoorwaarden. Zo kun je besmetting van het product voorkomen.</p><p>Tussendoor worden vragen gesteld. Dit zijn oefenvragen die niet meetellen voor de beoordeling. Soms kun je de antwoorden vinden in de tekst. Bij andere vragen moet je nadenken over je eigen werkplek. </p><p>Je kunt tussendoor stoppen met de training en later weer verdergaan op de plek waar je bent gebleven.</p><p>Aan het eind van de training krijg je een toets van 15 vragen. Haal een score van 80% om te slagen voor de training!</p><p>Voor vragen kun je terecht bij je leidinggevende of een mailtje sturen naar de opleidingscoördinator.</p><p>Deze training is gemaakt in samenwerking met deskundigen die werken in de voedingsmiddelenindustrie.</p><br><p>Succes!</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productKwaliteit/1/h1.jpg alt='afbeelding BasistrainingKwaliteit'></div>"
+        },
+        {
+          "id": 2,
+          "title": "Hoofdstuk 1",
+          "image": [],
+          "html": "<div class='inner-container-page__text'><span class='titel'>Hoofdstuk 1, Werken in de voedingsmiddelenindustrie</span><br><br><p>Deze training leert je alles over basisvoorwaarden voor het produceren van veilig voedsel. Daar heeft iedereen in het bedrijf invloed op, dus ook jij. De training duurt 1 tot 2 uur.</p><p>Aan het eind van sommige hoofdstukken vind je een actielijst die je kan helpen om te werken volgens de basisvoorwaarden. Zo kun je besmetting van het product voorkomen.</p><p>Tussendoor worden vragen gesteld. Dit zijn oefenvragen die niet meetellen voor de beoordeling. Soms kun je de antwoorden vinden in de tekst. Bij andere vragen moet je nadenken over je eigen werkplek. </p><p>Je kunt tussendoor stoppen met de training en later weer verdergaan op de plek waar je bent gebleven.</p><p>Aan het eind van de training krijg je een toets van 15 vragen. Haal een score van 80% om te slagen voor de training!</p><p>Voor vragen kun je terecht bij je leidinggevende of een mailtje sturen naar de opleidingscoördinator.</p><p>Deze training is gemaakt in samenwerking met deskundigen die werken in de voedingsmiddelenindustrie.</p><br><p>Succes!</p></div><div class='inner-container-page__img'></div>",
+          "pages": [{
+            "id": 1,
+            "img": [],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Leerresultaten</span><p>Als je de basistraining hebt afgerond, weet je alles om voedselveilig te kunnen werken in de voedingsmiddelenindustrie.</p><br><p>Aan het eind van de training weet je:</p><br><ul><li>Wat voor vormen van besmetting er zijn</li><li>Wat micro-organismen zijn en hoe je deze kan uitschakelen</li><li>Wat allergenen zijn en hoe we daar mee omgaan</li><li>Wat bedrijfsregels &amp; basisvoorwaarden zijn die te maken hebben met voedselveilig werken</li><li>Waarom deze bedrijfsregels belangrijk zijn</li><li>Wat hygiëne is en wat jouw rol daarin is</li><li>Hoe je kan reinigen en desinfecteren</li><li>Wat kwaliteitszorgsystemen zijn</li><li>Wat Food Fraud is</li><li>Wat Food Defense is</li></ul><br><p>Succes!</p></div><div class='inner-container-page__img'></div>"
+          },
+            {
+              "id": 2,
+              "img": ["h1-p2a.png", "h1-p2b.png"],
+              "html": "<div class='inner-container-page__text'><span class='titel'>Voedingsmiddelenbedrijven verantwoordelijk!</span><p>Voedingsmiddelenbedrijven hebben een verantwoordelijke rol, want ze produceren etenswaren:<br>VOEDSEL VOOR CONSUMENTEN ZOALS JIJ EN IK!<br>Uiteraard wil iedereen dat het voedsel dat we eten veilig is. Voedingsmiddelenbedrijven zijn hiervoor verantwoordelijk.Wie kent niet de berichten uit de media?</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productKwaliteit/1/p2/h1-p2a.jpg alt='krantenknipsel'><img src=/src/assets/images/productKwaliteit/1/p2/h1-p2b.jpg alt='krantenknipsel'</div>"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Hoofdstuk 2",
+          "image": [],
+          "html": "Welkom bij hoofdstuk 2"
+        }
+      ]
+    },
+    {
+      "id": "productArbo",
+      "title": "Basistraining Arbo",
+      "description": "Het is belangrijk dat je weet welke risico's je loopt op je werk en hoe je ongevallen kunt voorkomen. Daar leer je meer over in deze basistraining.",
+      "image": "arbo.png",
+      "hoofdstukken": []
+    }
+  ]
+}
