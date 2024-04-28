@@ -95,7 +95,7 @@ function Elearning() {
         const sanitizedHtml = sanitizeHtml(htmlContent, {
             allowedTags: ['h1', 'h2', 'h3', 'p', 'a', 'ul', 'ol', 'li', 'b', 'i', 'strong', 'em', 'u', 'img', 'span', 'div', 'br'],
             allowedAttributes: {
-                'a': ['href'], 'img': ['src', 'alt'], 'div': ['class'], 'span': ['class']
+                'a': ['href'], 'img': ['src', 'alt', 'style'], 'div': ['class'], 'span': ['class']
             },
             // Voeg hier eventueel andere configuraties toe afhankelijk van je behoeften
         });

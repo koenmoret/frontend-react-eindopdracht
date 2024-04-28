@@ -21,11 +21,21 @@
             "id": 1,
             "img": [],
             "html": "<div class='inner-container-page__text'><span class='titel'>Leerresultaten</span><p>Als je de basistraining hebt afgerond, weet je alles om voedselveilig te kunnen werken in de voedingsmiddelenindustrie.</p><br><p>Aan het eind van de training weet je:</p><br><ul><li>Wat voor vormen van besmetting er zijn</li><li>Wat micro-organismen zijn en hoe je deze kan uitschakelen</li><li>Wat allergenen zijn en hoe we daar mee omgaan</li><li>Wat bedrijfsregels &amp; basisvoorwaarden zijn die te maken hebben met voedselveilig werken</li><li>Waarom deze bedrijfsregels belangrijk zijn</li><li>Wat hygiëne is en wat jouw rol daarin is</li><li>Hoe je kan reinigen en desinfecteren</li><li>Wat kwaliteitszorgsystemen zijn</li><li>Wat Food Fraud is</li><li>Wat Food Defense is</li></ul><br><p>Succes!</p></div><div class='inner-container-page__img'></div>"
-          },
+            },
             {
-              "id": 2,
-              "img": ["h1-p2a.png", "h1-p2b.png"],
-              "html": "<div class='inner-container-page__text'><span class='titel'>Voedingsmiddelenbedrijven verantwoordelijk!</span><p>Voedingsmiddelenbedrijven hebben een verantwoordelijke rol, want ze produceren etenswaren:<br>VOEDSEL VOOR CONSUMENTEN ZOALS JIJ EN IK!<br>Uiteraard wil iedereen dat het voedsel dat we eten veilig is. Voedingsmiddelenbedrijven zijn hiervoor verantwoordelijk.Wie kent niet de berichten uit de media?</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productKwaliteit/1/p2/h1-p2a.jpg alt='krantenknipsel'><img src=/src/assets/images/productKwaliteit/1/p2/h1-p2b.jpg alt='krantenknipsel'</div>"
+            "id": 2,
+            "img": ["h1-p2a.png", "h1-p2b.png"],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Voedingsmiddelenbedrijven verantwoordelijk!</span><p>Voedingsmiddelenbedrijven hebben een verantwoordelijke rol, want ze produceren etenswaren:<br>VOEDSEL VOOR CONSUMENTEN ZOALS JIJ EN IK!<br>Uiteraard wil iedereen dat het voedsel dat we eten veilig is. Voedingsmiddelenbedrijven zijn hiervoor verantwoordelijk.Wie kent niet de berichten uit de media?</p><br><img src=/src/assets/images/productKwaliteit/1/p2/h1-p2a.png alt='krantenknipsel' style='max-width:48%; vertical-align: top;'>&nbsp;<img src=/src/assets/images/productKwaliteit/1/p2/h1-p2b.png alt='krantenknipsel' style='max-width:48%; vertical-align: top;'></div><div class='inner-container-page__img'></div>"
+            },
+            {
+            "id": 3,
+            "img": ["h1-p3.png"],
+            "html": "<div class='inner-container-page__text'><span class='titel'>Kwaliteitszorg</span><p>Voedingsmiddelenbedrijven zijn verantwoordelijk voor het produceren van producten die veilig zijn en voldoen aan gestelde kwaliteitseisen. Samen noemen we dit kwaliteitszorg.</p><br><p>Zorg voor kwaliteit is mensenwerk en ook jij bent hiervoor verantwoordelijk. Om je hierbij te helpen, heeft elke voedingsmiddelenbedrijf een kwaliteitszorgsysteem.</p><br><p>Daarin wordt naar het hele bedrijf gekeken. Naar de productie en naar de ondersteunende afdelingen. Samen zorgen jullie voor een juiste manier van samenwerken, waardoor de klant krijgt wat is afgesproken. In het kwaliteitszorgsysteem staan daarom afspraken over de samenwerking en werkwijze.</p><p>In deze basistraining besteden we vooral aandacht aan voedselveilige producten. De kwaliteit van de producten is geen onderdeel van deze training.</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productKwaliteit/1/p3/h1-p3.png alt='afbeelding Kwaliteitszorg'</div>"
+            },
+            {
+              "id": 4,
+              "img": ["h1-p4.png"],
+              "html": "<div class='inner-container-page__text'><span class='titel'>Voedselveilig product</span><p>Je leert in deze training eerst hoe je besmetting kan voorkomen. Later in de training leer je hoe je besmetting kan beperken of uitschakelen en hoe je besmetting kan detecteren.</p><br><p>Kortom:</p><br><ul><li>Voorkomen van besmetting: of en hoe je besmetting kan voorkomen.</li><li>Beperken of uitschakelen van besmetting: hoe je besmetting kan beperken of uitschakelen nadat het heeft plaatsgevonden.</li><li>Detecteren van besmetting: op welke manier je eventuele besmetting kan opsporen.</li></ul><br><p>Je leert ook over verschillende soorten besmetting: fysisch, microbiologisch, chemisch en met allergenen. En over nabesmetting en kruisbesmetting.</p><br><p>Dit is het einde van dit hoofdstuk. In het volgende hoofdstuk leer je meer over voedsel veilig produceren.</p></div><div class='inner-container-page__img'><img src=/src/assets/images/productKwaliteit/1/p4/h1-p4.png alt='afbeelding Voedselveilig product'</div>"
             }
           ]
         },

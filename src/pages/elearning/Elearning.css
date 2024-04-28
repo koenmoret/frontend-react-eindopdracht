@@ -10,15 +10,18 @@
     display: flex;
     width: 100%;
 }
+.page-viewer {
+    display: flex;
+}
 .inner-container-page__text {
     flex-basis: 65%;
 }
 .inner-container-page__img {
     flex-basis: 35%;
+    padding-left: 50px;
 }
 .inner-container-page__img img {
     width: 100%;
-    padding-left: 50px;
 }
 .elearning--menu {
     display: flex;
@@ -37,6 +40,9 @@
 .elearning--intro .titel {
     font-weight: 700;
     margin-bottom: 15px;
+}
+.elearning--page img {
+    border-radius: 5px;
 }
 .elearning--nav {
     display: flex;
