@@ -7,6 +7,7 @@ import PageViewer from "../../components/elearning/PageViewer.jsx";
 
 
 import "./Elearning.css"
+import pageViewer from "../../components/elearning/PageViewer.jsx";
 
 // eslint-disable-next-line react/prop-types
 function Elearning() {
@@ -112,7 +113,6 @@ function Elearning() {
             navigate('/dashboard');
         }
     };
-
     const handleNextPage = () => {
         if (currentPageIndex < product.chapters[currentChapterIndex].pages.length - 1) {
             setCurrentPageIndex(prevIndex => prevIndex + 1);
@@ -120,7 +120,6 @@ function Elearning() {
             handleNextChapter();
         }
     };
-
     const handlePreviousPage = () => {
         if (currentPageIndex > 0) {
             // Als het niet de eerste pagina van het hoofdstuk is, ga naar de vorige pagina
@@ -131,7 +130,6 @@ function Elearning() {
             setShowPageViewer(false); // Reset showPageViewer state
         }
     };
-
     const handleShowPageViewer = () => {
         setShowPageViewer(true);
     };
@@ -198,9 +196,18 @@ function Elearning() {
                                     <button onClick={handleNextPage}>Volgende pagina</button>
                                 )}
                                 {currentPageIndex === product.chapters[currentChapterIndex].pages.length - 1 && (
-                                    <button onClick={handleNextChapter}>Volgend hoofdstuk</button>
+                                    <button
+                                        onClick={handleNextChapter}>{currentChapterIndex + 1 === product.chapters.length ? `Einde E-learning` : `Volgend hoofdstuk`}</button>
                                 )}
                             </div>
+                        )}
+
+                    </div>
+                    <div className="elearning--page-numbers">
+                        {product.chapters[currentChapterIndex].pages && (
+                            <span>
+                                {(currentPageIndex === 0 && !showPageViewer) ? `Pagina ${currentPageIndex + 1} van ${product.chapters[currentChapterIndex].pages.length + 1}` : `Pagina ${currentPageIndex + 2} van ${product.chapters[currentChapterIndex].pages.length + 1}`}
+                            </span>
                         )}
                     </div>
                 </section>
