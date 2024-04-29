@@ -3,11 +3,10 @@ import {useLocation, useNavigate} from "react-router-dom";
 import sanitizeHtml from 'sanitize-html';
 import Header from "../../components/global/Header.jsx";
 import PageViewer from "../../components/elearning/PageViewer.jsx";
-// import PropTypes from 'prop-types';
-
+import { useCookies } from "react-cookie";
 
 import "./Elearning.css"
-import pageViewer from "../../components/elearning/PageViewer.jsx";
+
 
 // eslint-disable-next-line react/prop-types
 function Elearning() {
@@ -15,12 +14,13 @@ function Elearning() {
     const location = useLocation();
     const navigate = useNavigate();
     const {product} = location.state;
-    //const [productImagePath, setProductImagePath] = useState(null);
-    // const [imageChapterPaths, setChapterImagePaths] = useState({});
     const [imagePagePaths, setPageImagePaths] = useState({});
     const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
+    const [chapterStatus, setChapterStatus] = useState({});
     const [currentPageIndex, setCurrentPageIndex] = useState(0);
     const [showPageViewer, setShowPageViewer] = useState(false);
+    const [cookies, setCookie] = useCookies([`${product.id}_chapterStatus`]);
+
     const navigateToChapter = (index) => {
         setCurrentChapterIndex(index);
         setCurrentPageIndex(0); // Reset current page index
@@ -28,48 +28,38 @@ function Elearning() {
     };
 
     useEffect(() => {
-        // Importeer de afbeelding voor het product
-        // const importProductImage = async () => {
-        //     try {
-        //         const image = await import(`../../assets/images/${product.id}/${product.image}`);
-        //         setProductImagePath(image.default);
-        //     } catch (error) {
-        //         console.error("Er is een fout opgetreden bij het laden van de productafbeelding:", error);
-        //     }
-        // };
-        // importProductImage();
+        // Bereken de datum 365 dagen in de toekomst
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 365);
+        // Sla de bijgewerkte chapterStatus array op in een cookie
+        setCookie(`${product.id}_chapterStatus`, chapterStatus, {
+            expires: expirationDate, // Stel de vervaldatum in
+        });
+        // Check of het de laatste pagina van het laatste hoofdstuk is
+        const isLastPageLastChapter = currentChapterIndex === product.chapters.length - 1 &&
+            currentPageIndex === product.chapters[currentChapterIndex].pages.length - 1;
 
-        // Importeer alle afbeeldingen voor de hoofdstukken
-        // const importChapterImages = async () => {
-        //     const pathsChapter = {};
-        //     for (const chapter of product.chapters) {
-        //         for (const image of chapter.image) {
-        //             const path = `../../assets/images/${product.id}/${chapter.id}/${image}`;
-        //             try {
-        //                 const importedImage = await import(path);
-        //                 if (!pathsChapter[chapter.id]) {
-        //                     pathsChapter[chapter.id] = [];
-        //                 }
-        //                 pathsChapter[chapter.id].push(importedImage.default);
-        //             } catch (error) {
-        //                 console.error("Er is een fout opgetreden bij het laden van de hoofdstukafbeelding:", error);
-        //             }
-        //         }
-        //     }
-        //     //setChapterImagePaths(pathsChapter);
-        // };
-        // importChapterImages();
+        // Navigeer naar het dashboard als het de laatste pagina van het laatste hoofdstuk is en de chapterStatus is bijgewerkt
+        if (isLastPageLastChapter && Object.keys(chapterStatus).length > 0) {
+            navigate('/dashboard');
+        }
+    }, [chapterStatus]);
 
+    useEffect(() => {
+        const chapterStatusCookie = cookies[`${product.id}_chapterStatus`];
+        // Controleer of er een cookie bestaat voor de chapterStatus
+        if (chapterStatusCookie) {
+            // Werk de state bij met de uitgelezen chapterStatus array
+            setChapterStatus(chapterStatusCookie);
+        }
         const importPagesImages = async () => {
             const pathsPages = {};
             for (const chapter of product.chapters) {
                 if (chapter.pages) {
                     for (const page of chapter.pages) {
                         if (page.img) {
-                            console.log(page.img);
                             for (const image of page.img) {
                                 const path = `../../assets/images/${product.id}/${chapter.id}/p${page.id}/${image}`;
-                                console.log(path);
                                 try {
                                     const importedImage = await import(path);
                                     if (!pathsPages[image]) {
@@ -89,7 +79,6 @@ function Elearning() {
         importPagesImages();
     }, [product]);
 
-
     // Functie om HTML-inhoud te saniteren
     const sanitizeHtmlContent = (htmlContent) => {
         // Configureer de sanitizer opties
@@ -98,19 +87,23 @@ function Elearning() {
             allowedAttributes: {
                 'a': ['href'], 'img': ['src', 'alt', 'style'], 'div': ['class'], 'span': ['class']
             },
-            // Voeg hier eventueel andere configuraties toe afhankelijk van je behoeften
         });
         return sanitizedHtml;
     };
-
+    const updateChapterStatus = (chapterId, status) => {
+        setChapterStatus(prevStatus => ({
+            ...prevStatus,
+            [chapterId]: status
+        }));
+    };
     const handleNextChapter = () => {
         if (currentChapterIndex < product.chapters.length - 1) {
             setCurrentChapterIndex(prevIndex => prevIndex + 1);
             setCurrentPageIndex(0); // Reset current page index
             setShowPageViewer(false); // Reset showPageViewer state
+            updateChapterStatus(product.chapters[currentChapterIndex].id, true);  // Mark the chapter as completed
         } else {
-            console.log("Dit is het laatste hoofdstuk.");
-            navigate('/dashboard');
+            updateChapterStatus(product.chapters[currentChapterIndex].id, true);
         }
     };
     const handleNextPage = () => {
@@ -148,10 +141,10 @@ function Elearning() {
                             {product.chapters && product.chapters.map((chapter, index) => (
                                 <span key={index}
                                       onClick={() => navigateToChapter(index)}
-                                      className={currentChapterIndex === index ? 'active-chapter' : ''}
-                                >
-            {chapter.title}
-                        </span>
+                                      className={currentChapterIndex === index ? 'active-chapter' : ''}>
+                                    {chapter.title}
+                                    {chapterStatus[chapter.id] && <span className="completed-chapter-icon">✓</span>}
+                                </span>
                             ))}
                         </div>
 
@@ -173,17 +166,11 @@ function Elearning() {
                         </div>
                     </div>
                     <div className="elearning--nav">
-                        {/*{(!showPageViewer && (currentChapterIndex === product.chapters.length - 1 || !product.chapters[currentChapterIndex].pages)) && (*/}
-                        {/*    <button onClick={handleNextChapter}>Volgend hoofdstuk</button>*/}
-                        {/*)}*/}
                         {(!product.chapters[currentChapterIndex].pages) && (
                             <button onClick={handleNextChapter}>Volgend hoofdstuk</button>
                         )}
                         {!showPageViewer && (
                             <div>
-                                {/*{currentChapterIndex !== product.chapters.length - 1 && product.chapters[currentChapterIndex].pages && (*/}
-                                {/*    <button onClick={handleShowPageViewer}>Volgende pagina</button>*/}
-                                {/*)}*/}
                                 {product.chapters[currentChapterIndex].pages && (
                                     <button onClick={handleShowPageViewer}>Volgende pagina</button>
                                 )}

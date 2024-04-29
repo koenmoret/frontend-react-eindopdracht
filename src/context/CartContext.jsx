@@ -25,17 +25,7 @@ function CartContextProvider({children}) {
             [product]: status,
             cartItems: products.cartItems + value // Stel de bijgewerkte waarde van cartItems in
         }));
-        //Cookies.set("products", products, { expires: 365 });
     }
-
-    // function setPurchased(product,status, value) {
-    //     setProducts(prevProducts => ({
-    //         ...prevProducts,
-    //         [product]: status,
-    //         cartItems: products.cartItems + value
-    //     }));
-    //     //Cookies.set("products", products, { expires: 365 });
-    // }
 
     function setPurchased(product, status, value) {
         setProducts(prevProducts => {
@@ -46,7 +36,6 @@ function CartContextProvider({children}) {
                 cartItems: updatedCartItems
             };
         });
-        //Cookies.set("products", products, { expires: 365 });
     }
 
     const contextData = {

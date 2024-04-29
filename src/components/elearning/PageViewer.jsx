@@ -9,7 +9,7 @@ function PageViewer({ chapter, pageIndex, sanitizeHtmlContent }) {
     }
 
     return (
-            <div className="page-viewer" dangerouslySetInnerHTML={{ __html: sanitizeHtmlContent(currentPage.html) }} />
+        <div className="page-viewer" dangerouslySetInnerHTML={{ __html: sanitizeHtmlContent(currentPage.html) }} />
     );
 }
 
