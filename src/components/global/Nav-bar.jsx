@@ -25,7 +25,7 @@ function NavBar({setClass}) {
                                      className={({isActive}) => isActive ? 'nav-item active-link' : 'nav-item default-link'}>Producten</NavLink>
                         </li>
 
-                        {isAuth && <><li><span className="nav-item">Nieuws</span></li>
+                        {isAuth && <><li><NavLink to="/news"><span className="nav-item">Nieuws</span></NavLink></li>
                                      <li><NavLink to="/dashboard"><span className="nav-item">Dashboard</span></NavLink></li>
                                    </>}
                         {isAuth ? <li><span className="nav-item" onClick={logout}>Logout</span></li> :

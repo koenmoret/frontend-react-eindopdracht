@@ -1,0 +1,59 @@
+/*////////////////////////
+    Table of Contents
+    1. Typography
+    2. Areas
+        2.1 Navigation
+        2.2 Header
+        2.3 Products
+    3. Media Queries
+////////////////////////*/
+
+/*////////////////////////
+    1. Typography
+////////////////////////*/
+
+
+/*////////////////////////
+    2. Areas
+////////////////////////*/
+
+/*/////////
+2.1 Header
+/////////*/
+header {
+    height: 100px;
+}
+
+.header--nav {
+    display: flex;
+    flex-basis: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/*/////////
+2.2 Main
+/////////*/
+section.dashboard--header {
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: .25em;
+}

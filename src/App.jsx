@@ -9,6 +9,7 @@ import "./components/global/Global.css";
 import Register from "./pages/authentication/Register.jsx";
 import Login from "./pages/authentication/Login.jsx";
 import Checkout from "./pages/checkout/Checkout.jsx";
+import News from "./pages/news/News.jsx";
 import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Products from "./pages/products/Products.jsx";
 import Elearning from "./pages/elearning/Elearning.jsx";
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/products" element={<Products />}/>
                 {isAuth &&
                     <>
+                        <Route path="/news" element={<News />}/>
                     <Route path="/dashboard" element={<Dashboard />}/>
                     <Route path="/elearning/:id" element={<Elearning />} />
                     </>
