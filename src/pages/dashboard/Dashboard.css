@@ -57,3 +57,7 @@ section.dashboard--header {
     width: 100%;
     border-radius: .25em;
 }
+button.profile {
+    margin-top: 10px;
+    cursor: pointer;
+}

@@ -20,11 +20,22 @@ function CartContextProvider({children}) {
     });
 
     function setCart(product, status, value) {
+        console.log(products.cartItems);
+        if(product === "beide"){
         setProducts(prevProducts => ({
             ...prevProducts,
-            [product]: status,
-            cartItems: products.cartItems + value // Stel de bijgewerkte waarde van cartItems in
+            ["purchasedProductKwaliteit"]: status,
+            ["purchasedProductArbo"]: status,
+            ["cartItems"]: 0 // Stel de bijgewerkte waarde van cartItems in
         }));
+        }else {
+            setProducts(prevProducts => ({
+                ...prevProducts,
+                [product]: status,
+                ["cartItems"]: products.cartItems + value // Stel de bijgewerkte waarde van cartItems in
+            }));
+        }
+        console.log(products.cartItems);
     }
 
     function setPurchased(product, status, value) {
@@ -50,6 +61,7 @@ function CartContextProvider({children}) {
 
     // Save products to cookie whenever products state changes
     useEffect(() => {
+        console.log("useeffect: "+products.cartItems);
         Cookies.set("products", JSON.stringify(products), { expires: 365 });
     }, [products]);
 

@@ -1,9 +1,9 @@
 import {NavLink, useNavigate} from "react-router-dom";
 import {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
+import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
 
 import "./Authentication.css"
-import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
 
 
 // eslint-disable-next-line react/prop-types
@@ -82,8 +82,8 @@ function Login() {
 
                         <div className="row mb-4">
                             <div className="col">
-                                {/*Simple link*/}
-                                <span>Wachtwoord vergeten?</span>
+                                <span><NavLink
+                                    to="/resetPassword">Wachtwoord vergeten?</NavLink></span>
                             </div>
                         </div>
 

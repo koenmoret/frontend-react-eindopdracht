@@ -28,12 +28,16 @@ function Checkout() {
 
     function handlePayment() {
         if (getCartItems > 0) {
-            console.log(getProductKwaliteit + " "+getProductArbo);
-            if (getProductKwaliteit) {
-                setCart("purchasedProductKwaliteit", true, -1);
-                //setCart("productKwaliteit",true, -1);
+            console.log("Winkelmand: "+getProductKwaliteit + " "+getProductArbo);
+            if (getProductKwaliteit && getProductArbo) {
+                setCart("beide", true, -2);
+                //setCart("productKwaliteit",true, -2);
             }
-            if (getProductArbo) {
+            else if (getProductKwaliteit) {
+                setCart("purchasedProductKwaliteit", true, -1);
+                //setCart("productArbo",true, -1);
+            }
+            else if (getProductArbo) {
                 setCart("purchasedProductArbo", true, -1);
                 //setCart("productArbo",true, -1);
             }

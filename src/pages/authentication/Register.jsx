@@ -5,7 +5,6 @@ import {checkPasswordValidity} from "../../helper/checkPasswordValidity.js";
 import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
 import {AuthContext} from "../../context/AuthContext.jsx";
 
-
 function Register() {
 
     const {login} = useContext(AuthContext);
@@ -70,7 +69,7 @@ function Register() {
                     console.log("Gebruiker is geregistreerd");
                     checkAuthenticateValidity(values, login).then(validation => {
                         if (validation.status && validation.status === 200) {
-                            // Als de validatie succesvol is, ga door met de volgende actie, bijv. doorverwijzen naar een andere pagina
+                            // Als de validatie succesvol is, ga door met de volgende actie, bijv. doorverwijzen naar home
                             navigate('/');
                         } else if (validation.status === 400) {
                             setErrors({username: true});

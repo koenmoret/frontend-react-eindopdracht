@@ -1,14 +1,15 @@
 import Header from "../../components/global/Header.jsx";
 import Product from "../../components/products/Product.jsx";
+import {AuthContext} from "../../context/AuthContext.jsx";
 import {CartContext} from "../../context/CartContext.jsx";
+import {FavoritesContext} from "../../context/FavoritesContext.jsx";
 import {useContext} from "react";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import productsData from "../../constants/products.json";
 
 import "./Dashboard.css"
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
-import {AuthContext} from "../../context/AuthContext.jsx";
 
 
 // eslint-disable-next-line react/prop-types
@@ -16,13 +17,14 @@ function Dashboard() {
 
     const {user} = useContext(AuthContext);
     const {getPurchasedProductKwaliteit, getPurchasedProductArbo} = useContext(CartContext);
+    const {favorites} = useContext(FavoritesContext);
     const navigate = useNavigate();
-
     const startElearning = (productName) => {
         const product = productsData.products.find(product => product.id === productName);
-        console.log(product);
         navigate(`../elearning/${productName}`, { state: { product } });
     };
+
+    console.log("favorites "+favorites);
 
     return (
         <>
@@ -34,6 +36,7 @@ function Dashboard() {
                     <section className="dashboard--header">
                         <h2>Dashboard:</h2>
                         <p>Welkom {user.username}</p>
+                        <button className="btn-primary profile">Toon profiel</button>
                     </section>
                     <section className="dashboard--body">
                         <article className="products">
