@@ -66,19 +66,22 @@ function Dashboard() {
                             </>}
                         </article>
                     </section>
-                    <section className="dashboard--favorites">
-                        <h3>Favoriete artikelen</h3>
-                        <ul>
-                            {favorites.map((article, index) => (
-                                <li key={index}>
-                                    <h4>{article.title}</h4>
-                                    <p>{article.description}</p>
-                                    <a href={article.url} target="_blank" rel="noopener noreferrer">Lees meer</a>
-                                    <span className="btn-favorite" onClick={() => handleRemoveFavorite(article)}>Verwijder</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
+                    {favorites.length > 0 && <>
+                        <section className="dashboard--favorites">
+                            <h3>Favoriete artikelen:</h3>
+                            <ul>
+                                {favorites.map((article, index) => (
+                                    <li key={index}>
+                                        <h4>{article.title}</h4>
+                                        <p>{article.description}</p>
+                                        <a href={article.url} target="_blank" rel="noopener noreferrer">Lees meer</a>
+                                        <span className="btn-favorite"
+                                              onClick={() => handleRemoveFavorite(article)}>Verwijder</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    </>}
                 </section>
             </main>
         </>

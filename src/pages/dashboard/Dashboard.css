@@ -61,6 +61,12 @@ button.profile {
     margin-top: 10px;
     cursor: pointer;
 }
+.dashboard--favorites {
+    margin-top: 50px;
+}
+.dashboard--favorites li {
+    margin: 15px 0;
+}
 .btn-favorite {
     margin-left: 15px;
     color: var(--color-purple);
