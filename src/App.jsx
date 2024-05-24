@@ -1,6 +1,6 @@
 import {Routes, Route} from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
-import {createContext, useContext, useState} from "react";
+import {useContext} from "react";
 import { AuthContext } from './context/AuthContext.jsx';
 
 import "./components/global/Global.css";
@@ -23,13 +23,15 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/products" element={<Products />}/>
-                {isAuth &&
+                {isAuth ? (
                     <>
-                        <Route path="/news" element={<News />}/>
-                        <Route path="/dashboard" element={<Dashboard />}/>
+                        <Route path="/news" element={<News />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/elearning/:id" element={<Elearning />} />
                     </>
-                }
+                ) : (
+                    <Route path="*" element={<Login />} /> // Redirect to Login if not authenticated
+                )}
                 <Route path="/register" element={<Register />}/>
                 <Route path="/login" element={<Login />}/>
                 <Route path="/checkout" element={<Checkout />}/>
