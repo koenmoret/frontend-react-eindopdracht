@@ -9,13 +9,10 @@ import "./Authentication.css"
 // eslint-disable-next-line react/prop-types
 function Login() {
 
-    const {login} = useContext(AuthContext);
+    const {login, values, setValues} = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const [values, setValues] = useState({
-        username: "",
-        password: ""
-    });
+
 
     const [touched, setTouched] = useState({
         username: false,

@@ -3,6 +3,7 @@ import { useCookies } from "react-cookie";
 
 export const FavoriteContext = createContext();
 
+// eslint-disable-next-line react/prop-types
 const FavoriteContextProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([]);
     const [cookies, setCookie] = useCookies(['favorites']);

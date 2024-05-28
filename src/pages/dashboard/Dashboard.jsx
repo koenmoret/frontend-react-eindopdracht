@@ -41,7 +41,7 @@ function Dashboard() {
                 <section className="inner-container products">
                     <section className="dashboard--header">
                         <h2>Dashboard:</h2>
-                        <p>Welkom {user.username}</p>
+                        <p>Welkom {user.name}</p>
                         <button className="btn-primary profile" onClick={showProfile}>Toon profiel</button>
                     </section>
                     <section className="dashboard--body">

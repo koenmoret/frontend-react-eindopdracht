@@ -14,7 +14,20 @@ function News() {
 
     useEffect(() => {
         fetchNews();
-    }, [query, pageSize, language]);
+    }, [query, pageSize]);
+
+    useEffect(() => {
+        if (language === 'de') {
+            setQuery('gesundheitsministerium');
+        }
+        else if (language === 'en') {
+            setQuery('ministry of health');
+        }
+        else if (language === 'nl') {
+            setQuery('ministerie van Volksgezondheid');
+        }
+        fetchNews();
+    }, [language]);
 
     async function fetchNews() {
         const apiKey = "97c237fedab441e5919ed6cfa6aa5767";

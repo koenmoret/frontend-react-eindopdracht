@@ -4,7 +4,7 @@ export function checkPasswordValidity(password) {
     // Patroon voor het controleren van het gebruik van hoofdletters, kleine letters, cijfers en speciale tekens
     const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{"':;?/>.<,])(?=.*[^\s]).{8,}$/;
 
-    if (password.length < minLength || !pattern.test(password)) {
+    if (password.length < minLength || !pattern.test(password) || typeof password !== 'string') {
         return false;
     }
     return true;

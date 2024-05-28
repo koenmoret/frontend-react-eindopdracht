@@ -1,0 +1,59 @@
+/*////////////////////////
+    Table of Contents
+    1. Typography
+    2. Areas
+        2.1 Navigation
+        2.2 Header
+        2.3 Products
+    3. Media Queries
+////////////////////////*/
+
+/*////////////////////////
+    1. Typography
+////////////////////////*/
+
+
+/*////////////////////////
+    2. Areas
+////////////////////////*/
+
+/*/////////
+2.1 Header
+/////////*/
+header {
+    height: 100px;
+}
+
+.header--nav {
+    display: flex;
+    flex-basis: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/*/////////
+2.2 Main
+/////////*/
+section {
+    width: 100%;
+}
+.profile--editing {
+    display: flex;
+    gap: 80px;
+    margin-top: 50px;
+}
+.profile--editing .form {
+    width: 50%;
+}
+.profile--editing .modal {
+    width: 320px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #4f4f4f;
+    border-radius: 10px;
+    background-color: #7A7A7A;
+}
+.profile--editing .modal p {
+    color: #FFF;
+}

@@ -10,6 +10,13 @@ export const AuthContext = createContext({});
 // eslint-disable-next-line react/prop-types
 function AuthContextProvider({ children }) {
 
+  const [refresh, setRefresh] = useState(false);
+
+  const [values, setValues] = useState({
+    username: "",
+    password: ""
+  });
+
   useEffect(() => {
     const storedToken = localStorage.getItem("token");
     if(storedToken && checkTokenValidity(storedToken)){
@@ -18,6 +25,18 @@ function AuthContextProvider({ children }) {
       void logout();
     }
   }, []);
+
+  // Auto login/refresh user data
+  useEffect(() => {
+    if (refresh) {
+      const storedToken = localStorage.getItem('token');
+      if (storedToken && checkTokenValidity(storedToken)) {
+        void login(storedToken).then(() => {
+          setRefresh(false);
+        });
+      }
+    }
+  }, [refresh]);
 
   const [auth, setAuth] = useState({
     isAuth: false,
@@ -34,17 +53,18 @@ function AuthContextProvider({ children }) {
     try{
       const response = await axios.get(`https://api.datavortex.nl/kamonlinenovi/users/${decodedToken.sub}`, {
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${jwt}`,
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${jwt}`,
         }
       });
       setAuth({
         ...auth,
         isAuth: true,
         user: {
-          username: response.data.username,
+          name: response.data.username,
           email: response.data.email,
-          id: userid,
+          info: response.data.info,
+          userid: userid,
         },
         status: "done",
       });
@@ -53,7 +73,7 @@ function AuthContextProvider({ children }) {
     }
   }
 
-  function logout() {
+  function logout(redirectPath = '/') {
     console.log('Gebruiker is uitgelogd!');
     setAuth({
       ...auth,
@@ -62,14 +82,17 @@ function AuthContextProvider({ children }) {
       status: "done",
     });
     localStorage.clear();
-    navigate('/');
+    navigate(redirectPath);
   }
 
   const contextData = {
+    values,
+    setValues,
     isAuth: auth.isAuth,
     user: auth.user,
     login,
     logout,
+    setRefresh
   };
 
   return (

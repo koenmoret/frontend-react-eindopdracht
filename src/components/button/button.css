@@ -1,0 +1,11 @@
+.regular-button {
+    padding: 10px;
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    background-color: var(--white);
+}
+
+.regular-button:hover {
+    cursor: pointer;
+    background-color: var(--light-grey);
+}
