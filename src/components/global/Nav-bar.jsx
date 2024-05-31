@@ -1,28 +1,30 @@
-import './Nav-bar.css';
+import { toggleForm } from "../../helper/helpers.js";
 import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext.jsx';
 import { CartContext } from "../../context/CartContext.jsx";
-import { useContext, useState } from "react";
+import { useContext } from "react";
+
+import './Nav-bar.css';
 
 // eslint-disable-next-line react/prop-types
-function NavBar({ setClass }) {
+function NavBar({ setClass, isMenuOpen, setMenuOpen }) {
     const { isAuth, logout } = useContext(AuthContext);
     const { getCartItems } = useContext(CartContext);
-    const [menuOpen, setMenuOpen] = useState(false);
+    //const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+    // const toggleMenu = () => {
+    //     setMenuOpen(true);
+    // };
 
     return (
         <>
             <div className="header--nav">
-                <nav className={`${setClass} ${menuOpen ? 'open' : ''}`}>
-                    <div className="menu-icon" onClick={toggleMenu}>
-                        {menuOpen ? <FaTimes /> : <FaBars />}
+                <nav className={`${setClass} ${isMenuOpen && 'open'}`}>
+                    <div className="menu-icon" onClick={() => toggleForm(isMenuOpen,setMenuOpen)}>
+                        {isMenuOpen ? <FaTimes /> : <FaBars />}
                     </div>
-                    <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+                    <ul className={`nav-links ${isMenuOpen && 'open'}`}>
                         <li><NavLink to="/" className={({ isActive }) => isActive ? 'nav-item active-link' : 'nav-item default-link'}>Home</NavLink></li>
                         <li><NavLink to="/products" className={({ isActive }) => isActive ? 'nav-item active-link' : 'nav-item default-link'}>Producten</NavLink></li>
                         {isAuth && <>
