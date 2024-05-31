@@ -61,15 +61,15 @@ body {
 a:hover {
     cursor: pointer;
 }
-#hamburger--btn {
-    display: none;
-}
 .btn:hover {
     cursor: pointer;
 }
 .btn-primary {
     padding: 0 15px;
     border-radius: 0.25rem;
+}
+#hamburger--btn {
+    display: none;
 }
 .danger {
     border: 2px solid red!important;
@@ -242,5 +242,9 @@ label {
         text-align: center;
         z-index: 1;
     }
+    section.dashboard--body, section.dashboard--favorites {
+        width: 80vW;
+    }
+
 }
 
