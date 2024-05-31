@@ -2,10 +2,10 @@ import Header from "../../components/global/Header.jsx";
 import Product from "../../components/products/Product.jsx";
 import {CartContext} from "../../context/CartContext.jsx";
 import {useContext} from "react";
-
-import "./Products.css"
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
+import Footer from "../../components/global/Footer.jsx";
+import "./Products.css"
 
 
 // eslint-disable-next-line react/prop-types
@@ -45,6 +45,7 @@ function Products() {
                     </article>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

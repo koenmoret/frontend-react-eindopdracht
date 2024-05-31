@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 import sanitizeHtml from 'sanitize-html';
 import Header from "../../components/global/Header.jsx";
@@ -6,6 +6,7 @@ import PageViewer from "../../components/elearning/PageViewer.jsx";
 import { useCookies } from "react-cookie";
 
 import "./Elearning.css"
+
 
 
 // eslint-disable-next-line react/prop-types

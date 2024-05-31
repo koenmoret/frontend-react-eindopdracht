@@ -7,6 +7,7 @@ import {AuthContext} from "../../context/AuthContext.jsx";
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
 import "./Checkout.css";
+import Footer from "../../components/global/Footer.jsx";
 
 // eslint-disable-next-line react/prop-types
 function Checkout() {
@@ -105,6 +106,7 @@ function Checkout() {
 
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

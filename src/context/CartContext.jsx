@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import React, {createContext, useEffect, useState} from 'react';
+import {createContext, useContext, useEffect, useState} from 'react';
+import {AuthContext} from "./AuthContext.jsx";
 import Cookies from 'js-cookie';
 
 export const CartContext = createContext({});
@@ -7,16 +8,28 @@ export const CartContext = createContext({});
 // eslint-disable-next-line react/prop-types
 function CartContextProvider({children}) {
 
+    const { isAuth } = useContext(AuthContext);
+
     const [products, setProducts] = useState(() => {
-        // Load products from cookie or use default values if not found
-        const storedProducts = Cookies.get("products");
-        return storedProducts ? JSON.parse(storedProducts) : {
-            productKwaliteit: false,
-            productArbo: false,
-            cartItems: 0,
-            purchasedProductKwaliteit: false,
-            purchasedProductArbo: false
-        };
+        if (isAuth) {
+            // Load products from cookie or use default values if not found
+            const storedProducts = Cookies.get("products");
+            return storedProducts ? JSON.parse(storedProducts) : {
+                productKwaliteit: false,
+                productArbo: false,
+                cartItems: 0,
+                purchasedProductKwaliteit: false,
+                purchasedProductArbo: false
+            };
+        }else {
+            return {
+                productKwaliteit: false,
+                productArbo: false,
+                cartItems: 0,
+                purchasedProductKwaliteit: false,
+                purchasedProductArbo: false
+            };
+        }
     });
 
     function setCart(product, status, value) {
@@ -61,7 +74,6 @@ function CartContextProvider({children}) {
 
     // Save products to cookie whenever products state changes
     useEffect(() => {
-        console.log("useeffect: "+products.cartItems);
         Cookies.set("products", JSON.stringify(products), { expires: 365 });
     }, [products]);
 

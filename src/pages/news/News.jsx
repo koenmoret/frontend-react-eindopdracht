@@ -3,6 +3,7 @@ import axios from "axios";
 import Header from "../../components/global/Header.jsx";
 import {FavoriteContext} from "../../context/FavoritesContext.jsx";
 import "./News.css";
+import Footer from "../../components/global/Footer.jsx";
 
 
 function News() {
@@ -54,7 +55,7 @@ function News() {
 
     return (
         <>
-            <Header setClass="global products" />
+            <Header setClass="global news" />
             <main className="outer-container">
                 <section className="inner-container news">
                     <section className="news--header">
@@ -105,6 +106,7 @@ function News() {
                     ))}
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

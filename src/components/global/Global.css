@@ -212,8 +212,17 @@ label {
     /*opacity: 0;*/
 }
 
-
-
+/*/////////
+3.2 Footer
+/////////*/
+.outer-container.footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+}
+.outer-container.footer .inner-container {
+    justify-content: center;
+}
 
 
 /*////////////////////////

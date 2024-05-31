@@ -1,13 +1,13 @@
 import "./Home.css"
 import Header from "../../components/global/Header.jsx";
-import {AuthContext} from '../../context/AuthContext.jsx';
-import {useContext} from "react";
+import Footer from "../../components/global/Footer.jsx";
 
 function Home() {
 
     return (
         <>
             <Header setClass="home"/>
+            <Footer />
         </>
     );
 }

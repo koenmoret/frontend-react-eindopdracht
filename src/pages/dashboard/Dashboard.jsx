@@ -10,6 +10,7 @@ import productsData from "../../constants/products.json";
 import "./Dashboard.css"
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
+import Footer from "../../components/global/Footer.jsx";
 
 
 // eslint-disable-next-line react/prop-types
@@ -34,7 +35,7 @@ function Dashboard() {
 
     return (
         <>
-            <Header setClass="global products"/>
+            <Header setClass="global dashboard"/>
 
             <main className="outer-container">
 
@@ -84,6 +85,7 @@ function Dashboard() {
                     </>}
                 </section>
             </main>
+            <Footer />
         </>
     );
 }

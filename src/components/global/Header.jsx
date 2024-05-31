@@ -13,7 +13,9 @@ const Header = ({setClass}) => {
             <div className={`header--background__overlay`}></div>
             <section className="inner-container">
                 <NavBar setClass={setClass} setMenuOpen={setMenuOpen} isMenuOpen={isMenuOpen}/>
-                {setClass === 'home' && <div className="header--title"><h1>KAM Online</h1><h2>Kwaliteit, Arbo en Milieu</h2></div>}
+                {setClass === 'home' && <div className="header--title"><h1>KAM Online</h1><h2>Kwaliteit, Arbo en Milieu</h2><span className="intro--text">
+                    KAM staat voor Kwaliteit, Arbo en Milieu. KAM is een managementsysteem met de focus op kwaliteit van producten en diensten, de omgeving en de mensen. KAM-Online verzorgt basistrainingen voor uw personeel, zodat u de kwaliteit van uw producten kunt waarborgen.
+                </span></div>}
             </section>
         </header>
 );

@@ -4,6 +4,7 @@ import {AuthContext} from "../../context/AuthContext.jsx";
 import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
 
 import "./Authentication.css"
+import Footer from "../../components/global/Footer.jsx";
 
 
 // eslint-disable-next-line react/prop-types
@@ -96,6 +97,7 @@ function Login() {
                     </form>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }
