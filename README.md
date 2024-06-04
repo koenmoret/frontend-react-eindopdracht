@@ -94,5 +94,16 @@ cookie
 "_Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing_" <br> 
 sanitizeHtml 
 
-### prop-types
+#### prop-types
 PropTypes
+
+### Aan_de_slag
+
+Nadat alle requirements zijn doorlopen kan je de applicatie starten met
+
+```
+npm run dev
+```
+Dit draait de applicatie in ontwikkel modus.
+
+Nadat de applicatie draait kunt u zelf een test account aanmaken.
