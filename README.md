@@ -8,7 +8,7 @@ GitHub repository: https://github.com/koenmoret/frontend-react-eindopdracht
 * [Over dit project](#Over_dit_project)<br>
 * [Requirements](#Requirements)<br>
 * [Installatie](#Installatie)<br>
-* [Aan de slag](#Aan_de-slag)<br>
+* [Aan de slag](#Aan_de_slag)<br>
   <br><br>
   ![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/ScreenShot.png "screenshot")
 
