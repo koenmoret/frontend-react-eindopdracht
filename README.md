@@ -91,7 +91,7 @@ jwtDecode
 cookie
 
 #### sanitize-html
-"Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing" <br> 
+"_Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing_" <br> 
 sanitizeHtml 
 
 ### prop-types
