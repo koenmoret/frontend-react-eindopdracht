@@ -12,22 +12,22 @@ GitHub repository: https://github.com/Marjolein-Kasman-de-Jong/glimmer-and-gear
   <br><br>
   ![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/ScreenShot.png "screenshot")
 
-# Requirements
+## Requirements
 
-# react-router-dom
+### react-router-dom
 NavLink, useNavigate, Route, Routes, useLocation
 
-# React
+### React
 createContext, useContext, useState
 
-# Axios
+### Axios
 axios
 
-# Iconen
+### Iconen
 react-icons/fa
 react-icons/tb
 
-# Database
+### Database
 https://novi.datavortex.nl/
 Your X-Api-Key: kamonline:iTJlC19urHBbchBzvk7T
 
@@ -38,15 +38,15 @@ Headers: {
 'X-Api-Key':kamonline:iTJlC19urHBbchBzvk7T
 }
 
-# jwt-decode
+### jwt-decode
 jwtDecode
 
-# js-cookie
+### js-cookie
 cookie
 
-# sanitize-html
-/* Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing */ 
+### sanitize-html
+"Door de HTML-inhoud te saniteren voordat je deze rendert, minimaliseer je het risico op XSS-aanvallen (Cross-Site Scripting) en andere beveiligingsproblemen die kunnen optreden wanneer onveilige HTML wordt weergegeven in je toepassing" 
 sanitizeHtml 
 
-# prop-types
+### prop-types
 PropTypes
