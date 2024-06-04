@@ -5,14 +5,14 @@ GitHub repository: https://github.com/koenmoret/frontend-react-eindopdracht
 
 ## Table of contents
 
-* [Over dit project](#Over-dit-project)<br>
+* [Over dit project](#Over)<br>
 * [Requirements](#Requirements)<br>
 * [Installatie](#Installatie)<br>
 * [Aan de slag](#Aan-de-slag)<br>
   <br><br>
   ![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/ScreenShot.png "screenshot")
 
-## Over-dit-project
+## Over dit project
 Dit project is onderdeel van de eindopdracht HBO-bachelor Software Development leerlijn Frontend.
 Door deze opdracht uit te voeren toon ik aan een volwaardige webapplicatie te kunnen bouwen in de
 frontend.
@@ -63,13 +63,13 @@ npm install -g npm@latest
 https://github.com/koenmoret/frontend-react-eindopdracht.git
 ```
 
-4. Install npm packages:
+4. Installeer benodigde npm paketten:
 
 ```
-npm install **packages**
+npm install 
 ```
 
-### Packages:
+### npm Paketten:
 
 #### react-router-dom
 NavLink, useNavigate, Route, Routes, useLocation
