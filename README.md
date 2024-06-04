@@ -33,6 +33,20 @@ Een gebruiker kan:
 
 ## Requirements
 
+### Runtime environment
+Om dit project op uw lokale computer te installeren en uit te voeren, is Node.js vereist. Je kunt Node.js [hier](https://nodejs.org/en).
+
+#### API
+
+Deze webapplicatie maakt gebruik van de API [newsapi.org](https://newsapi.org/).
+Hiervoor is de volgende apiKey noodzakelijk: 
+
+"97c237fedab441e5919ed6cfa6aa5767";
+
+#### Backend
+
+De [NOVI Educational Backend](https://novi.datavortex.nl/) is beschikbaar gesteld door [NOVI Hogeschool](https://www.novi.nl/?utm_term=novi%20hogeschool&utm_campaign=SDIM+-+NOVI+-+Branded++-+22-12-2023&utm_source=adwords&utm_medium=ppc&hsa_acc=4280163138&hsa_cam=20882328921&hsa_grp=157473255015&hsa_ad=685547414547&hsa_src=g&hsa_tgt=aud-1929441721854:kwd-853861328135&hsa_kw=novi%20hogeschool&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQjw_qexBhCoARIsAFgBlesmYcB3FUcXIxt_UghxIsCzDt7_GbSVXnr1MyhFws0Fahj6eG1AcxkaAms2EALw_wcB).
+
 ### react-router-dom
 NavLink, useNavigate, Route, Routes, useLocation
 
