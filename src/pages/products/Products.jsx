@@ -1,9 +1,9 @@
-import Header from "../../components/global/Header.jsx";
-import Product from "../../components/products/Product.jsx";
-import {CartContext} from "../../context/CartContext.jsx";
-import {useContext} from "react";
+import { CartContext } from "../../context/CartContext.jsx";
+import { useContext } from "react";
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
+import Header from "../../components/global/Header.jsx";
+import Product from "../../components/products/Product.jsx";
 import Footer from "../../components/global/Footer.jsx";
 import "./Products.css"
 
@@ -12,7 +12,6 @@ import "./Products.css"
 function Products() {
 
     const {getProductKwaliteit, getProductArbo, setCart } = useContext(CartContext);
-
     const addToCart = (productName) => {
         setCart(productName, true, +1);
     };

@@ -1,7 +1,5 @@
-
-// eslint-disable-next-line react/prop-types
 import NavBar from "./Nav-bar.jsx";
-import {useState} from "react";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
 const Header = ({setClass}) => {

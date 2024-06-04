@@ -1,16 +1,15 @@
-import Header from "../../components/global/Header.jsx";
-import Product from "../../components/products/Product.jsx";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import { CartContext } from "../../context/CartContext.jsx";
 import { FavoriteContext } from "../../context/FavoritesContext.jsx";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/global/Header.jsx";
+import Product from "../../components/products/Product.jsx";
+import Footer from "../../components/global/Footer.jsx";
 import productsData from "../../constants/products.json";
-
-import "./Dashboard.css"
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
-import Footer from "../../components/global/Footer.jsx";
+import "./Dashboard.css"
 
 
 // eslint-disable-next-line react/prop-types

@@ -1,7 +1,7 @@
-import {Routes, Route} from "react-router-dom";
-import Home from "./pages/home/Home.jsx";
-import {useContext} from "react";
 import { AuthContext } from './context/AuthContext.jsx';
+import { Routes, Route } from "react-router-dom";
+import { useContext } from "react";
+import Home from "./pages/home/Home.jsx";
 import Register from "./pages/authentication/Register.jsx";
 import Login from "./pages/authentication/Login.jsx";
 import Checkout from "./pages/checkout/Checkout.jsx";
@@ -11,7 +11,6 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 import Products from "./pages/products/Products.jsx";
 import Elearning from "./pages/elearning/Elearning.jsx";
-
 import "./components/global/Global.css";
 
 function App() {

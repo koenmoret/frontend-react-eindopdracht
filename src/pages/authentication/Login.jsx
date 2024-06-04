@@ -1,10 +1,9 @@
-import {NavLink, useNavigate} from "react-router-dom";
-import {useContext, useState} from "react";
-import {AuthContext} from "../../context/AuthContext.jsx";
-import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
-
-import "./Authentication.css"
+import { AuthContext } from "../../context/AuthContext.jsx";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { checkAuthenticateValidity } from "../../helper/checkAuthenticateValidity.js";
 import Footer from "../../components/global/Footer.jsx";
+import "./Authentication.css";
 
 
 // eslint-disable-next-line react/prop-types
@@ -12,19 +11,14 @@ function Login() {
 
     const {login, values, setValues} = useContext(AuthContext);
     const navigate = useNavigate();
-
-
-
     const [touched, setTouched] = useState({
         username: false,
         password: false
     });
-
     const [errors, setErrors] = useState({
         username: false,
         password: false
     });
-
     const handleInput = (event) => {
         setValues(prev => ({...prev, [event.target.name]: [event.target.value]}));
         setErrors({ username: false, password: false });
@@ -40,7 +34,6 @@ function Login() {
 
         checkAuthenticateValidity(values, login).then(validation => {
             if (validation.status && validation.status === 200) {
-                // Als de validatie succesvol is, ga door met de volgende actie, bijv. doorverwijzen naar een andere pagina
                 navigate('/');
             } else if (validation.status === 400) {
                 setErrors({username: true});
@@ -88,7 +81,7 @@ function Login() {
                         {/*Submit button*/}
                         <button type="submit" className="btn btn-primary btn-block mb-4">Inloggen</button>
 
-                        {/*Register buttons*/}
+                        {/*Register link*/}
                         <div className="text-center">
                             <p>Geen account? <span className="btn btn-primary"><NavLink
                                 to="/register">Registreer</NavLink></span>

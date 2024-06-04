@@ -4,18 +4,13 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext.jsx';
 import { CartContext } from "../../context/CartContext.jsx";
 import { useContext } from "react";
-
 import './Nav-bar.css';
 
 // eslint-disable-next-line react/prop-types
 function NavBar({ setClass, isMenuOpen, setMenuOpen }) {
+
     const { isAuth, logout } = useContext(AuthContext);
     const { getCartItems } = useContext(CartContext);
-    //const [menuOpen, setMenuOpen] = useState(false);
-
-    // const toggleMenu = () => {
-    //     setMenuOpen(true);
-    // };
 
     return (
         <>

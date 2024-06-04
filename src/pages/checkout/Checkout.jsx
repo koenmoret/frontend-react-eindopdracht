@@ -1,13 +1,12 @@
-import {useContext, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
-import Header from "../../components/global/Header.jsx";
-import {CartContext} from "../../context/CartContext.jsx";
-import {AuthContext} from "../../context/AuthContext.jsx";
-
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { CartContext } from "../../context/CartContext.jsx";
+import { AuthContext } from "../../context/AuthContext.jsx";
 import kwaliteit from "../../assets/images/productKwaliteit/kwaliteit.png";
 import arbo from "../../assets/images/productArbo/arbo.png";
-import "./Checkout.css";
+import Header from "../../components/global/Header.jsx";
 import Footer from "../../components/global/Footer.jsx";
+import "./Checkout.css";
 
 // eslint-disable-next-line react/prop-types
 function Checkout() {
@@ -17,7 +16,6 @@ function Checkout() {
         getProductArbo,
         getCartItems,
         setCart,
-        setPurchased,
         getPurchasedProductKwaliteit,
         getPurchasedProductArbo
     } = useContext(CartContext);
@@ -32,15 +30,12 @@ function Checkout() {
             console.log("Winkelmand: "+getProductKwaliteit + " "+getProductArbo);
             if (getProductKwaliteit && getProductArbo) {
                 setCart("beide", true, -2);
-                //setCart("productKwaliteit",true, -2);
             }
             else if (getProductKwaliteit) {
                 setCart("purchasedProductKwaliteit", true, -1);
-                //setCart("productArbo",true, -1);
             }
             else if (getProductArbo) {
                 setCart("purchasedProductArbo", true, -1);
-                //setCart("productArbo",true, -1);
             }
             if (!isAuth) {
                 navigate('/login');

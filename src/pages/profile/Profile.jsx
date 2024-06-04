@@ -1,39 +1,29 @@
-import Header from "../../components/global/Header.jsx";
-import {AuthContext} from "../../context/AuthContext.jsx";
+import { AuthContext } from "../../context/AuthContext.jsx";
 import axios from "axios";
-import {useContext, useState} from "react";
-import {jwtDecode} from "jwt-decode";
-import {checkPasswordValidity} from "../../helper/checkPasswordValidity.js";
-
-// Icons
-import {SlPencil} from 'react-icons/sl';
-
-// styles
-import "./Profile.css"
-
-
+import { useContext, useState } from "react";
+import { jwtDecode } from "jwt-decode";
+import { checkPasswordValidity } from "../../helper/checkPasswordValidity.js";
+import { SlPencil } from 'react-icons/sl';
+import Header from "../../components/global/Header.jsx";
+import "./Profile.css";
 
 // eslint-disable-next-line react/prop-types
 function Profile() {
 
     const {user, setRefresh, logout} = useContext(AuthContext);
     const icon = <SlPencil/>;
-
     const [edit, toggleEdit] = useState(false);
-
     const [formValues, setFormValues] = useState({
         username: null,
         email: null,
         password: null,
         info: null
     });
-
     const [label, setLabel] = useState({
         username: false,
         email: false,
         password: false
     });
-
     const [errors, setErrors] = useState({
         username: false,
         email: false,
@@ -52,15 +42,29 @@ function Profile() {
     // Update user profile
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!checkPasswordValidity(formValues.password)) {
-            setErrors({password: true});
-        }else {
+        alert("1 " + formValues.password);
+        if (formValues.username === '') {
+            formValues.username = null;
+        }
+        if (formValues.password === '') {
+            formValues.password = null;
+        }if (formValues.password !== null) {
+            if (!checkPasswordValidity(formValues.password)) {
+                setErrors({password: true});
+            }
+        }
+        if (formValues.email === '') {
+            formValues.email = null;
+        }
+        if (formValues.info === '') {
+            formValues.info = null;
+        }
+        else {
+            alert("2 "+ formValues.password+" "+"3 "+formValues.username);
             try {
-
                 if (storedToken) {
                     decodedStoredToken = jwtDecode(storedToken);
                 }
-
                 const response = await axios.put(`https://api.datavortex.nl/kamonlinenovi/users/${decodedStoredToken.sub}`, formValues, {
                     headers: {
                         'Content-Type': 'application/json',
@@ -154,6 +158,7 @@ function Profile() {
                                         adres</label>
                                     {errors.email && <span className="text-danger">Emailadres bestaat al</span>}
                                 </div>
+                                {/*Password input*/}
                                 <div className="form-outline mb-4">
                                     <input type="password"
                                            name="password"
@@ -174,13 +179,9 @@ function Profile() {
                                        onChange={handleInput}
                                    >
                                    </textarea>
-                                    <label className={`form-label ${label.info && 'active'}`} form="info">Persoonlijke
-                                        info
-                                    </label>
+                                    <label className={`form-label ${label.info && 'active'}`} form="info">Persoonlijke info</label>
                                 </div>
-
                                 <button type="submit" className="btn btn-primary btn-block mb-4">Opslaan</button>
-
                             </form>
                             </div>
                             <div className='modal'>
@@ -189,9 +190,7 @@ function Profile() {
                                 </div>
                             </div></>
                             :
-                            <button type='button' className="btn btn-primary btn-block mb-4"
-                                    onClick={() => toggleEdit(!edit)}
-                            >
+                            <button type='button' className="btn btn-primary btn-block mb-4" onClick={() => toggleEdit(!edit)}>
                                 bewerk
                                 {icon}
                             </button>

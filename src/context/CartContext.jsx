@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import {createContext, useContext, useEffect, useState} from 'react';
-import {AuthContext} from "./AuthContext.jsx";
+import { createContext, useContext, useEffect, useState } from 'react';
+import { AuthContext} from "./AuthContext.jsx";
 import Cookies from 'js-cookie';
 
 export const CartContext = createContext({});
@@ -39,13 +39,13 @@ function CartContextProvider({children}) {
             ...prevProducts,
             ["purchasedProductKwaliteit"]: status,
             ["purchasedProductArbo"]: status,
-            ["cartItems"]: 0 // Stel de bijgewerkte waarde van cartItems in
+            ["cartItems"]: 0
         }));
         }else {
             setProducts(prevProducts => ({
                 ...prevProducts,
                 [product]: status,
-                ["cartItems"]: products.cartItems + value // Stel de bijgewerkte waarde van cartItems in
+                ["cartItems"]: products.cartItems + value
             }));
         }
         console.log(products.cartItems);

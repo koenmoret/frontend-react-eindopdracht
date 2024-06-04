@@ -1,12 +1,10 @@
-import {useEffect, useState} from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 import sanitizeHtml from 'sanitize-html';
 import Header from "../../components/global/Header.jsx";
 import PageViewer from "../../components/elearning/PageViewer.jsx";
-import { useCookies } from "react-cookie";
-
 import "./Elearning.css"
-
 
 
 // eslint-disable-next-line react/prop-types
@@ -29,18 +27,15 @@ function Elearning() {
     };
 
     useEffect(() => {
-        // Bereken de datum 365 dagen in de toekomst
         const expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + 365);
-        // Sla de bijgewerkte chapterStatus array op in een cookie
         setCookie(`${product.id}_chapterStatus`, chapterStatus, {
-            expires: expirationDate, // Stel de vervaldatum in
+            expires: expirationDate
         });
-        // Check of het de laatste pagina van het laatste hoofdstuk is
+        // Check last page of chapter
         const isLastPageLastChapter = currentChapterIndex === product.chapters.length - 1 &&
             currentPageIndex === product.chapters[currentChapterIndex].pages.length - 1;
 
-        // Navigeer naar het dashboard als het de laatste pagina van het laatste hoofdstuk is en de chapterStatus is bijgewerkt
         if (isLastPageLastChapter && Object.keys(chapterStatus).length > 0) {
             navigate('/dashboard');
         }
@@ -48,9 +43,7 @@ function Elearning() {
 
     useEffect(() => {
         const chapterStatusCookie = cookies[`${product.id}_chapterStatus`];
-        // Controleer of er een cookie bestaat voor de chapterStatus
         if (chapterStatusCookie) {
-            // Werk de state bij met de uitgelezen chapterStatus array
             setChapterStatus(chapterStatusCookie);
         }
         const importPagesImages = async () => {
@@ -80,7 +73,6 @@ function Elearning() {
         importPagesImages();
     }, [product]);
 
-    // Functie om HTML-inhoud te saniteren
     const sanitizeHtmlContent = (htmlContent) => {
         // Configureer de sanitizer opties
         const sanitizedHtml = sanitizeHtml(htmlContent, {
@@ -116,7 +108,7 @@ function Elearning() {
     };
     const handlePreviousPage = () => {
         if (currentPageIndex > 0) {
-            // Als het niet de eerste pagina van het hoofdstuk is, ga naar de vorige pagina
+            // If it is not the first page of the chapter, go to the previous page
             setCurrentPageIndex(prevIndex => prevIndex - 1);
         } else {
             setCurrentChapterIndex(prevIndex => prevIndex);

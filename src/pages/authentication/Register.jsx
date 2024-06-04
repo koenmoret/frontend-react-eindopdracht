@@ -1,9 +1,9 @@
-import {useContext, useState} from "react";
+import { useContext, useState } from "react";
+import { checkPasswordValidity } from "../../helper/checkPasswordValidity.js";
+import { checkAuthenticateValidity } from "../../helper/checkAuthenticateValidity.js";
+import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext.jsx";
 import axios from "axios";
-import {NavLink, useNavigate} from "react-router-dom";
-import {checkPasswordValidity} from "../../helper/checkPasswordValidity.js";
-import {checkAuthenticateValidity} from "../../helper/checkAuthenticateValidity.js";
-import {AuthContext} from "../../context/AuthContext.jsx";
 
 function Register() {
 
@@ -69,8 +69,7 @@ function Register() {
                     console.log("Gebruiker is geregistreerd");
                     checkAuthenticateValidity(values, login).then(validation => {
                         if (validation.status && validation.status === 200) {
-                            // Als de validatie succesvol is, ga door met de volgende actie, bijv. doorverwijzen naar home
-                            navigate('/');
+                           navigate('/');
                         } else if (validation.status === 400) {
                             setErrors({username: true});
                         } else if (validation.status === 401) {

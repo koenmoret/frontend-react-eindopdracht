@@ -1,9 +1,9 @@
+import { FavoriteContext } from "../../context/FavoritesContext.jsx";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import Header from "../../components/global/Header.jsx";
-import {FavoriteContext} from "../../context/FavoritesContext.jsx";
-import "./News.css";
 import Footer from "../../components/global/Footer.jsx";
+import "./News.css";
 
 
 function News() {
@@ -41,7 +41,6 @@ function News() {
             setArticles([]);
         }
     }
-
     const handleSearch = (e) => {
         e.preventDefault();
         fetchNews();
@@ -96,10 +95,7 @@ function News() {
                             <h4>{article.title}</h4>
                             <p>{article.description}</p>
                             <a href={article.url} target="_blank" rel="noopener noreferrer">Lees meer</a>
-                            <span
-                                className="btn-favorite"
-                                onClick={() => isFavorite(article) ? removeFromFavorites(article) : addToFavorites(article)}
-                            >
+                            <span className="btn-favorite" onClick={() => isFavorite(article) ? removeFromFavorites(article) : addToFavorites(article)}>
                                 {isFavorite(article) ? "Verwijder uit favoriet" : "Voeg toe aan favorieten"}
                             </span>
                         </div>

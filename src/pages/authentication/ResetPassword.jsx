@@ -1,11 +1,9 @@
-import {NavLink} from "react-router-dom";
-import {checkPasswordValidity} from "../../helper/checkPasswordValidity.js";
-import {useState} from "react";
-
+import { NavLink } from "react-router-dom";
+import { checkPasswordValidity } from "../../helper/checkPasswordValidity.js";
+import { useState } from "react";
 import "./Authentication.css"
 
 function ResetPassword() {
-
 
     const [values, setValues] = useState({
         username: "",
@@ -51,37 +49,6 @@ function ResetPassword() {
         }
         else if (!checkPasswordValidity(values.password)) {
             setErrors({ passwordValidation: true });
-        }
-        else {
-            // try {
-            //     const response = await axios.put("https://api.datavortex.nl/kamonlinenovi/users/koen6/", {
-            //             username: `koen6`,
-            //             password: `12345678`
-            //         },
-            //         {
-            //             headers: {
-            //                 'Content-Type': 'application/json',
-            //                 'X-Api-Key': 'kamonlinenovi:rv8l37E54HZfMeCdH9VT'
-            //             }
-            //         });
-            //     if (response.status === 200) {
-            //         console.log("Wachtwoord gewijzigd");
-            //         return { status: response.status };
-            //     }
-            // } catch (error) {
-            //
-            //     if (error.response && error.response.status === 400) {
-            //         //console.error(error);
-            //         return { status: error.response.status};
-            //     }
-            //     else if (error.response && error.response.status === 401) {
-            //         //console.error(error);
-            //         return { status: error.response.status };
-            //     } else {
-            //         // console.error(error);
-            //         return { error: "Er is een fout opgetreden bij het wijzigen" };
-            //     }
-            // }
         }
     }
 
@@ -130,7 +97,6 @@ function ResetPassword() {
                             {errors.passwordValidation && <span className="text-danger">Gebruik tenminste 8 tekens (tenminste één hoofdletter, kleine letter, cijfer en speciale teken)</span>}
                         </div>
 
-                        {/*Submit button*/}
                         <button type="submit" className="btn btn-primary btn-block mb-4">Reset wachtwoord</button>
 
                         {/*Register buttons*/}
