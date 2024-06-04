@@ -5,14 +5,14 @@ GitHub repository: https://github.com/koenmoret/frontend-react-eindopdracht
 
 ## Table of contents
 
-* [Over dit project](#Over)<br>
+* [Over dit project](#Over_dit_project)<br>
 * [Requirements](#Requirements)<br>
 * [Installatie](#Installatie)<br>
-* [Aan de slag](#Aan-de-slag)<br>
+* [Aan de slag](#Aan_de-slag)<br>
   <br><br>
   ![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/ScreenShot.png "screenshot")
 
-## Over dit project
+## Over_dit_project
 Dit project is onderdeel van de eindopdracht HBO-bachelor Software Development leerlijn Frontend.
 Door deze opdracht uit te voeren toon ik aan een volwaardige webapplicatie te kunnen bouwen in de
 frontend.
