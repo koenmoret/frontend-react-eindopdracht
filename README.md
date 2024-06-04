@@ -39,9 +39,10 @@ Om dit project op uw lokale computer te installeren en uit te voeren, is Node.js
 #### API
 
 Deze webapplicatie maakt gebruik van de API [newsapi.org](https://newsapi.org/).
-Hiervoor is de volgende apiKey noodzakelijk: 
+Hiervoor is een apiKey noodzakelijk.
 
-"97c237fedab441e5919ed6cfa6aa5767";
+[![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/api.png "get ApiKey")](https://newsapi.org/register)
+
 
 #### Backend
 
