@@ -5,10 +5,10 @@ GitHub repository: https://github.com/koenmoret/frontend-react-eindopdracht
 
 ## Table of contents
 
-* [About this project](#Over dit project)<br>
+* [Over dit project](#Over dit project)<br>
 * [Requirements](#Requirements)<br>
-* [Installation](#Installatie)<br>
-* [Getting started](#Aan de slag)<br>
+* [Installatie](#Installatie)<br>
+* [Aan de slag](#Aan de slag)<br>
   <br><br>
   ![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/ScreenShot.png "screenshot")
 
