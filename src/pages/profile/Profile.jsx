@@ -42,7 +42,6 @@ function Profile() {
     // Update user profile
     const handleSubmit = async (event) => {
         event.preventDefault();
-        alert("1 " + formValues.password);
         if (formValues.username === '') {
             formValues.username = null;
         }
@@ -60,7 +59,6 @@ function Profile() {
             formValues.info = null;
         }
         else {
-            alert("2 "+ formValues.password+" "+"3 "+formValues.username);
             try {
                 if (storedToken) {
                     decodedStoredToken = jwtDecode(storedToken);
@@ -102,7 +100,6 @@ function Profile() {
             } catch (error) {
                 if (error.response && error.response.status === 409) {
                     const response = error.response;
-                    alert(response.data);
                     if (response.data === "Username already exists in application kamonlinenovi") {
                         setErrors({username: true});
                     }
