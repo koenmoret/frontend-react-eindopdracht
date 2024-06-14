@@ -34,7 +34,7 @@ Een gebruiker kan:
 ## Requirements
 
 ### Runtime environment
-Om dit project op uw lokale computer te installeren en uit te voeren, is Node.js vereist. Je kunt Node.js [hier](https://nodejs.org/en).
+Om dit project op uw lokale computer te installeren en uit te voeren, is Node.js vereist. Je kunt Node.js [hier](https://nodejs.org/en) downloaden.
 
 #### API
 
@@ -43,7 +43,8 @@ Hiervoor is een apiKey noodzakelijk.
 
 [![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/api.png "get ApiKey")](https://newsapi.org/register)
 
-Of maak gebruik van de bestaande apiKey = "97c237fedab441e5919ed6cfa6aa5767".
+Of maak gebruik van de bestaande apiKey = "97c237fedab441e5919ed6cfa6aa5767".<br>
+Deze api is nodig in News.jsx.
 
 #### Backend
 
