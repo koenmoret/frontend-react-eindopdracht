@@ -44,7 +44,7 @@ Hiervoor is een apiKey noodzakelijk.
 [![alt text](https://github.com/koenmoret/frontend-react-eindopdracht/blob/main/src/assets/images/api.png "get ApiKey")](https://newsapi.org/register)
 
 Of maak gebruik van de bestaande apiKey = "97c237fedab441e5919ed6cfa6aa5767".<br>
-Deze api is nodig in News.jsx.
+Deze api is nodig in het bestand /pages/news/News.jsx.
 
 #### Backend
 
