@@ -106,4 +106,7 @@ npm run dev
 ```
 Dit draait de applicatie in ontwikkel modus.
 
-Nadat de applicatie draait kunt u zelf een test account aanmaken.
+Nadat de applicatie draait kunt u zelf een test account aanmaken of gebruik maken van het account:
+
+Gebruikersnaam: Demo
+Wachtwoord: Qwerty01,
