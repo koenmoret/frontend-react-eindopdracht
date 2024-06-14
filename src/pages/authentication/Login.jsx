@@ -2,8 +2,10 @@ import { AuthContext } from "../../context/AuthContext.jsx";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { checkAuthenticateValidity } from "../../helper/checkAuthenticateValidity.js";
+import Header from "../../components/global/Header.jsx";
 import Footer from "../../components/global/Footer.jsx";
 import "./Authentication.css";
+
 
 
 // eslint-disable-next-line react/prop-types
@@ -49,6 +51,7 @@ function Login() {
 
     return (
         <>
+            <Header setClass="global" />
             <main className="outer-container">
                 <section className="inner-container login">
                     <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>

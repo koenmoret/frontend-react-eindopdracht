@@ -1,6 +1,6 @@
 # KAM ONLINE
 
-Figma project: <br>
+Figma project: https://www.figma.com/design/iWlJucNbcAOaxLcRWILWEp/KamOnline?node-id=0-1&t=VrND0WnCG7WMfhGh-0<br>
 GitHub repository: https://github.com/koenmoret/frontend-react-eindopdracht
 
 ## Table of contents

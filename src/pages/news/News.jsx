@@ -90,7 +90,11 @@ function News() {
                             </select>
                         </form>
                     </section>
-                    {articles.map((article, index) => (
+                    {articles.length === 0 ? (
+                        <div className="no-results">
+                            <p>Geen resultaten</p>
+                        </div>
+                    ) : (articles.map((article, index) => (
                         <div key={index} className="article">
                             <h4>{article.title}</h4>
                             <p>{article.description}</p>
@@ -99,7 +103,8 @@ function News() {
                                 {isFavorite(article) ? "Verwijder uit favoriet" : "Voeg toe aan favorieten"}
                             </span>
                         </div>
-                    ))}
+                        ))
+                    )}
                 </section>
             </main>
             <Footer />

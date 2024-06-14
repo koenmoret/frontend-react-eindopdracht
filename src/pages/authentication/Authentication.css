@@ -12,7 +12,7 @@
 ////////////////////////*/
 .login .header--title h1 {
   line-height: 1em;
-  color: #ababab;
+  color: #FFF;
 }
 modal p {
   color:#FFF;
@@ -43,24 +43,22 @@ modal {
 /////////*/
 .login  {
   flex-basis: 30em;
-  margin-top: 10vH;
-  border: 1px solid #e6e6e6;
 }
 .login .header--title {
-  flex-basis: 300px;
+  flex-basis: 335px;
 }
 .login form {
   width: 400px;
   padding: 1.5rem;
   margin-bottom: 60px;
+  background-color: #FFF;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
 }
 .login input.form-control {
   border: 2px solid #e6e6e6;
   border-radius: 5px;
 }
-
-
-
 
 
 

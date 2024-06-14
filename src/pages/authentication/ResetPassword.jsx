@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { checkPasswordValidity } from "../../helper/checkPasswordValidity.js";
 import { useState } from "react";
-import "./Authentication.css"
+import Footer from "../../components/global/Footer.jsx";
+import Header from "../../components/global/Header.jsx";
+import "./Authentication.css";
 
 function ResetPassword() {
 
@@ -54,6 +56,7 @@ function ResetPassword() {
 
     return (
         <>
+            <Header setClass="global" />
             <main className="outer-container">
                 <section className="inner-container login">
                     <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>
@@ -107,6 +110,7 @@ function ResetPassword() {
                     </form>
                 </section>
             </main>
+            <Footer />
             <modal><p>Helaas is deze optie niet mogelijk in verband met de beperkingen van Novi backend en mail mogelijkheden.</p></modal>
         </>)
 }

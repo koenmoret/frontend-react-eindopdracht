@@ -63,10 +63,11 @@ function AuthContextProvider({ children }) {
           name: response.data.username,
           email: response.data.email,
           info: response.data.info,
-          userid: userid,
+          userid: userid
         },
-        status: "done",
+        status: "done"
       });
+      navigate("/dashboard");
     }catch(e){
        console.error(e);
     }

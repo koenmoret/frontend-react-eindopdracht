@@ -4,6 +4,8 @@ import { checkAuthenticateValidity } from "../../helper/checkAuthenticateValidit
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import axios from "axios";
+import Header from "../../components/global/Header.jsx";
+import Footer from "../../components/global/Footer.jsx";
 
 function Register() {
 
@@ -98,6 +100,7 @@ function Register() {
 
     return (
         <>
+            <Header setClass="global" />
             <main className="outer-container">
                 <section className="inner-container login">
                     <div className="header--title"><NavLink to="/"><h1>KAM Online</h1></NavLink></div>
@@ -165,6 +168,7 @@ function Register() {
                     </form>
                 </section>
             </main>
+            <Footer />
         </>)
 }
 

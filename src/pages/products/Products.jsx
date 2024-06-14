@@ -19,7 +19,6 @@ function Products() {
     return (
         <>
             <Header setClass="global products" />
-
             <main className="outer-container">
                 <section className="inner-container products">
                     <article className="products">
